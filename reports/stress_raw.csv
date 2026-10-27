@@ -1,0 +1,637 @@
+scénario,rep,assureur,méthode,erreur,drapeau,repli,décès
+S1 marché à 2 assureurs,0,A,Table OMS seule,0.3824068852840271,,4,51.0
+S1 marché à 2 assureurs,0,A,Expérience propre,0.3423168795421054,,4,51.0
+S1 marché à 2 assureurs,0,A,Table de marché,0.2985543665796081,,4,51.0
+S1 marché à 2 assureurs,0,A,Aléa global,0.2772720757839001,,4,51.0
+S1 marché à 2 assureurs,0,A,Aléa bandes,0.2979169245341148,,4,51.0
+S1 marché à 2 assureurs,0,B,Table OMS seule,0.5958157712790237,,3,17.0
+S1 marché à 2 assureurs,0,B,Expérience propre,0.11706395834835066,,3,17.0
+S1 marché à 2 assureurs,0,B,Table de marché,0.26599879409245036,,3,17.0
+S1 marché à 2 assureurs,0,B,Aléa global,0.2596562573596868,,3,17.0
+S1 marché à 2 assureurs,0,B,Aléa bandes,0.2655353446066212,,3,17.0
+S1 marché à 2 assureurs,1,A,Table OMS seule,0.38054873299908837,,4,44.0
+S1 marché à 2 assureurs,1,A,Expérience propre,0.4994395417284837,,4,44.0
+S1 marché à 2 assureurs,1,A,Table de marché,0.5972050347652555,,4,44.0
+S1 marché à 2 assureurs,1,A,Aléa global,0.5974879900549187,,4,44.0
+S1 marché à 2 assureurs,1,A,Aléa bandes,0.5976082987935741,,4,44.0
+S1 marché à 2 assureurs,1,B,Table OMS seule,0.5883242795006337,,2,12.0
+S1 marché à 2 assureurs,1,B,Expérience propre,0.3478004876482413,,2,12.0
+S1 marché à 2 assureurs,1,B,Table de marché,0.3834215903570648,,2,12.0
+S1 marché à 2 assureurs,1,B,Aléa global,0.3834137845447237,,2,12.0
+S1 marché à 2 assureurs,1,B,Aléa bandes,0.3834156983535992,,2,12.0
+S1 marché à 2 assureurs,2,A,Table OMS seule,0.3841963901985211,,3,59.0
+S1 marché à 2 assureurs,2,A,Expérience propre,0.2748112406238727,,3,59.0
+S1 marché à 2 assureurs,2,A,Table de marché,0.4019649803458059,,3,59.0
+S1 marché à 2 assureurs,2,A,Aléa global,0.401904953604296,,3,59.0
+S1 marché à 2 assureurs,2,A,Aléa bandes,0.40195097155589504,,3,59.0
+S1 marché à 2 assureurs,2,B,Table OMS seule,0.6036445449893122,,3,10.0
+S1 marché à 2 assureurs,2,B,Expérience propre,0.5488017182200245,,3,10.0
+S1 marché à 2 assureurs,2,B,Table de marché,0.14955193638773795,,3,10.0
+S1 marché à 2 assureurs,2,B,Aléa global,0.1496262192860246,,3,10.0
+S1 marché à 2 assureurs,2,B,Aléa bandes,0.14960916909653865,,3,10.0
+S1 marché à 2 assureurs,3,A,Table OMS seule,0.39310665855905025,,4,60.0
+S1 marché à 2 assureurs,3,A,Expérience propre,0.09071343158806286,,4,60.0
+S1 marché à 2 assureurs,3,A,Table de marché,0.18515108251302662,,4,60.0
+S1 marché à 2 assureurs,3,A,Aléa global,0.1851778827678363,,4,60.0
+S1 marché à 2 assureurs,3,A,Aléa bandes,0.18517923698230362,,4,60.0
+S1 marché à 2 assureurs,3,B,Table OMS seule,0.6440115271715534,,3,21.0
+S1 marché à 2 assureurs,3,B,Expérience propre,0.784981887354591,,3,21.0
+S1 marché à 2 assureurs,3,B,Table de marché,0.4198522710298956,,3,21.0
+S1 marché à 2 assureurs,3,B,Aléa global,0.41983874477736716,,3,21.0
+S1 marché à 2 assureurs,3,B,Aléa bandes,0.4198509661523812,,3,21.0
+S1 marché à 2 assureurs,4,A,Table OMS seule,0.3873085742359257,,3,65.0
+S1 marché à 2 assureurs,4,A,Expérience propre,0.19658405644847415,,3,65.0
+S1 marché à 2 assureurs,4,A,Table de marché,0.26277113281200226,,3,65.0
+S1 marché à 2 assureurs,4,A,Aléa global,0.2640968973754899,,3,65.0
+S1 marché à 2 assureurs,4,A,Aléa bandes,0.23277357715123426,,3,65.0
+S1 marché à 2 assureurs,4,B,Table OMS seule,0.6171857913502545,,3,17.0
+S1 marché à 2 assureurs,4,B,Expérience propre,0.573701637210122,,3,17.0
+S1 marché à 2 assureurs,4,B,Table de marché,0.3319772122798937,,3,17.0
+S1 marché à 2 assureurs,4,B,Aléa global,0.3798239789537014,,3,17.0
+S1 marché à 2 assureurs,4,B,Aléa bandes,0.39361896683876146,,3,17.0
+S1 marché à 2 assureurs,5,A,Table OMS seule,0.3830340220091063,,4,53.0
+S1 marché à 2 assureurs,5,A,Expérience propre,0.12285449501541996,,4,53.0
+S1 marché à 2 assureurs,5,A,Table de marché,0.3476166599665452,,4,53.0
+S1 marché à 2 assureurs,5,A,Aléa global,0.270999821616833,,4,53.0
+S1 marché à 2 assureurs,5,A,Aléa bandes,0.3189372484449474,,4,53.0
+S1 marché à 2 assureurs,5,B,Table OMS seule,0.5985717176398122,,3,4.0
+S1 marché à 2 assureurs,5,B,Expérience propre,0.7192727147924403,,3,4.0
+S1 marché à 2 assureurs,5,B,Table de marché,0.4485778205421871,,3,4.0
+S1 marché à 2 assureurs,5,B,Aléa global,0.5251623524038794,,3,4.0
+S1 marché à 2 assureurs,5,B,Aléa bandes,0.5221838097541442,,3,4.0
+S2 formes extrêmes,0,A,Table OMS seule,0.37727011532059673,,1,231.0
+S2 formes extrêmes,0,A,Expérience propre,0.16013867238835514,,1,231.0
+S2 formes extrêmes,0,A,Table de marché,0.06783519534966063,,1,231.0
+S2 formes extrêmes,0,A,Aléa global,0.06800076184669109,,1,231.0
+S2 formes extrêmes,0,A,Aléa bandes,0.06782789875555985,,1,231.0
+S2 formes extrêmes,0,A,Aléa LOO,0.06972258744296055,,1,231.0
+S2 formes extrêmes,0,B,Table OMS seule,1.0183555112792073,,3,147.0
+S2 formes extrêmes,0,B,Expérience propre,0.18106821539888537,,3,147.0
+S2 formes extrêmes,0,B,Table de marché,0.6848011863199377,,3,147.0
+S2 formes extrêmes,0,B,Aléa global,0.6850993226358563,,3,147.0
+S2 formes extrêmes,0,B,Aléa bandes,0.6850325117681147,,3,147.0
+S2 formes extrêmes,0,B,Aléa LOO,0.8293766873567596,,3,147.0
+S2 formes extrêmes,0,C,Table OMS seule,0.5622635762365057,,3,100.0
+S2 formes extrêmes,0,C,Expérience propre,0.14190907682771284,,3,100.0
+S2 formes extrêmes,0,C,Table de marché,0.8131572280416248,,3,100.0
+S2 formes extrêmes,0,C,Aléa global,0.813029453323813,,3,100.0
+S2 formes extrêmes,0,C,Aléa bandes,0.8132803335570571,,3,100.0
+S2 formes extrêmes,0,C,Aléa LOO,1.0806488757169064,,3,100.0
+S2 formes extrêmes,0,D,Table OMS seule,0.7098479339672948,,4,56.0
+S2 formes extrêmes,0,D,Expérience propre,0.11763233091114238,,4,56.0
+S2 formes extrêmes,0,D,Table de marché,0.35752077144303646,,4,56.0
+S2 formes extrêmes,0,D,Aléa global,0.35762390574965963,,4,56.0
+S2 formes extrêmes,0,D,Aléa bandes,0.3575797092552234,,4,56.0
+S2 formes extrêmes,0,D,Aléa LOO,0.38456185819763555,,4,56.0
+S2 formes extrêmes,0,E,Table OMS seule,0.28685346896964214,,3,16.0
+S2 formes extrêmes,0,E,Expérience propre,0.54783155559282,,3,16.0
+S2 formes extrêmes,0,E,Table de marché,0.48587681316472364,,3,16.0
+S2 formes extrêmes,0,E,Aléa global,0.4859472809730586,,3,16.0
+S2 formes extrêmes,0,E,Aléa bandes,0.4859274123728922,,3,16.0
+S2 formes extrêmes,0,E,Aléa LOO,0.48279001898259377,,3,16.0
+S2 formes extrêmes,0,F,Table OMS seule,0.37727011532059673,,3,20.0
+S2 formes extrêmes,0,F,Expérience propre,0.08796693258589498,,3,20.0
+S2 formes extrêmes,0,F,Table de marché,0.06783519534966063,,3,20.0
+S2 formes extrêmes,0,F,Aléa global,0.06785298004138553,,3,20.0
+S2 formes extrêmes,0,F,Aléa bandes,0.06782965134326267,,3,20.0
+S2 formes extrêmes,0,F,Aléa LOO,0.062031836338246854,,3,20.0
+S2 formes extrêmes,1,A,Table OMS seule,0.3788082247920541,,1,211.0
+S2 formes extrêmes,1,A,Expérience propre,0.12315982457965213,,1,211.0
+S2 formes extrêmes,1,A,Table de marché,0.09760018622511699,,1,211.0
+S2 formes extrêmes,1,A,Aléa global,0.07445354715649888,,1,211.0
+S2 formes extrêmes,1,A,Aléa bandes,0.04287457827932039,,1,211.0
+S2 formes extrêmes,1,A,Aléa LOO,0.029076894673736392,,1,211.0
+S2 formes extrêmes,1,B,Table OMS seule,1.034746389993869,,3,159.0
+S2 formes extrêmes,1,B,Expérience propre,0.14471274046720178,,3,159.0
+S2 formes extrêmes,1,B,Table de marché,0.7998150483024995,,3,159.0
+S2 formes extrêmes,1,B,Aléa global,0.8731078839924087,,3,159.0
+S2 formes extrêmes,1,B,Aléa bandes,0.8801675803316664,,3,159.0
+S2 formes extrêmes,1,B,Aléa LOO,1.12686072062559,,3,159.0
+S2 formes extrêmes,1,C,Table OMS seule,0.5726018987882536,,3,102.0
+S2 formes extrêmes,1,C,Expérience propre,0.07437702340954752,,3,102.0
+S2 formes extrêmes,1,C,Table de marché,0.7347338582732242,,3,102.0
+S2 formes extrêmes,1,C,Aléa global,0.7176571352250362,,3,102.0
+S2 formes extrêmes,1,C,Aléa bandes,0.7536154272244378,,3,102.0
+S2 formes extrêmes,1,C,Aléa LOO,1.00583844404489,,3,102.0
+S2 formes extrêmes,1,D,Table OMS seule,0.7194148392823722,,4,47.0
+S2 formes extrêmes,1,D,Expérience propre,0.32400637981309255,,4,47.0
+S2 formes extrêmes,1,D,Table de marché,0.4686435645040235,,4,47.0
+S2 formes extrêmes,1,D,Aléa global,0.470342802682566,,4,47.0
+S2 formes extrêmes,1,D,Aléa bandes,0.4787009207965129,,4,47.0
+S2 formes extrêmes,1,D,Aléa LOO,0.5120297043134253,,4,47.0
+S2 formes extrêmes,1,E,Table OMS seule,0.28918571425320105,,3,29.0
+S2 formes extrêmes,1,E,Expérience propre,0.207089316238232,,3,29.0
+S2 formes extrêmes,1,E,Table de marché,0.4040716893281289,,3,29.0
+S2 formes extrêmes,1,E,Aléa global,0.3939879946055983,,3,29.0
+S2 formes extrêmes,1,E,Aléa bandes,0.3952802118678008,,3,29.0
+S2 formes extrêmes,1,E,Aléa LOO,0.4223701811210514,,3,29.0
+S2 formes extrêmes,1,F,Table OMS seule,0.3788082247920541,,3,18.0
+S2 formes extrêmes,1,F,Expérience propre,0.398306818273983,,3,18.0
+S2 formes extrêmes,1,F,Table de marché,0.09760018622511699,,3,18.0
+S2 formes extrêmes,1,F,Aléa global,0.07050173414337464,,3,18.0
+S2 formes extrêmes,1,F,Aléa bandes,0.08127592491734535,,3,18.0
+S2 formes extrêmes,1,F,Aléa LOO,0.09316567959259256,,3,18.0
+S2 formes extrêmes,2,A,Table OMS seule,0.3780192128905115,,1,251.0
+S2 formes extrêmes,2,A,Expérience propre,0.13182787377305166,,1,251.0
+S2 formes extrêmes,2,A,Table de marché,0.21526823547889823,,1,251.0
+S2 formes extrêmes,2,A,Aléa global,0.13449959654070223,,1,251.0
+S2 formes extrêmes,2,A,Aléa bandes,0.1915696037046838,,1,251.0
+S2 formes extrêmes,2,A,Aléa LOO,0.2419146126917164,,1,251.0
+S2 formes extrêmes,2,B,Table OMS seule,1.0225599458864392,,2,183.0
+S2 formes extrêmes,2,B,Expérience propre,0.10531563758218271,,2,183.0
+S2 formes extrêmes,2,B,Table de marché,0.872273505894934,,2,183.0
+S2 formes extrêmes,2,B,Aléa global,0.9456492838304046,,2,183.0
+S2 formes extrêmes,2,B,Aléa bandes,0.9141690302081463,,2,183.0
+S2 formes extrêmes,2,B,Aléa LOO,1.1028012009448973,,2,183.0
+S2 formes extrêmes,2,C,Table OMS seule,0.5623305865336263,,3,112.0
+S2 formes extrêmes,2,C,Expérience propre,0.03131403206743345,,3,112.0
+S2 formes extrêmes,2,C,Table de marché,0.6664182138377093,,3,112.0
+S2 formes extrêmes,2,C,Aléa global,0.664967910834866,,3,112.0
+S2 formes extrêmes,2,C,Aléa bandes,0.6797179307936079,,3,112.0
+S2 formes extrêmes,2,C,Aléa LOO,0.9107958831726446,,3,112.0
+S2 formes extrêmes,2,D,Table OMS seule,0.7126491558196857,,3,49.0
+S2 formes extrêmes,2,D,Expérience propre,0.1313520388944737,,3,49.0
+S2 formes extrêmes,2,D,Table de marché,0.5555732745054012,,3,49.0
+S2 formes extrêmes,2,D,Aléa global,0.5136074221151827,,3,49.0
+S2 formes extrêmes,2,D,Aléa bandes,0.5189975769649836,,3,49.0
+S2 formes extrêmes,2,D,Aléa LOO,0.5534208814802821,,3,49.0
+S2 formes extrêmes,2,E,Table OMS seule,0.285274300519322,,3,33.0
+S2 formes extrêmes,2,E,Expérience propre,0.3604766920084159,,3,33.0
+S2 formes extrêmes,2,E,Table de marché,0.3533089170587367,,3,33.0
+S2 formes extrêmes,2,E,Aléa global,0.34833560432323,,3,33.0
+S2 formes extrêmes,2,E,Aléa bandes,0.34781207308990614,,3,33.0
+S2 formes extrêmes,2,E,Aléa LOO,0.38002345331860754,,3,33.0
+S2 formes extrêmes,2,F,Table OMS seule,0.3780192128905115,,3,16.0
+S2 formes extrêmes,2,F,Expérience propre,0.2242540107892647,,3,16.0
+S2 formes extrêmes,2,F,Table de marché,0.21526823547889823,,3,16.0
+S2 formes extrêmes,2,F,Aléa global,0.20708587176746462,,3,16.0
+S2 formes extrêmes,2,F,Aléa bandes,0.21081321354775026,,3,16.0
+S2 formes extrêmes,2,F,Aléa LOO,0.21495704803927365,,3,16.0
+S2 formes extrêmes,3,A,Table OMS seule,0.37864097549958725,,1,248.0
+S2 formes extrêmes,3,A,Expérience propre,0.113102007224749,,1,248.0
+S2 formes extrêmes,3,A,Table de marché,0.24207430174791586,,1,248.0
+S2 formes extrêmes,3,A,Aléa global,0.15196840094084693,,1,248.0
+S2 formes extrêmes,3,A,Aléa bandes,0.19152995959963048,,1,248.0
+S2 formes extrêmes,3,A,Aléa LOO,0.23977756596119615,,1,248.0
+S2 formes extrêmes,3,B,Table OMS seule,1.0272539432295757,,2,180.0
+S2 formes extrêmes,3,B,Expérience propre,0.39439232286128295,,2,180.0
+S2 formes extrêmes,3,B,Table de marché,0.9220617370185016,,2,180.0
+S2 formes extrêmes,3,B,Aléa global,1.0062135369595706,,2,180.0
+S2 formes extrêmes,3,B,Aléa bandes,0.9730566092924432,,2,180.0
+S2 formes extrêmes,3,B,Aléa LOO,1.117594410874361,,2,180.0
+S2 formes extrêmes,3,C,Table OMS seule,0.5644355824603499,,3,125.0
+S2 formes extrêmes,3,C,Expérience propre,0.1280462410681012,,3,125.0
+S2 formes extrêmes,3,C,Table de marché,0.619625561405786,,3,125.0
+S2 formes extrêmes,3,C,Aléa global,0.5956826302501335,,3,125.0
+S2 formes extrêmes,3,C,Aléa bandes,0.6271592595665231,,3,125.0
+S2 formes extrêmes,3,C,Aléa LOO,0.8216976505757938,,3,125.0
+S2 formes extrêmes,3,D,Table OMS seule,0.7160714320786428,,4,47.0
+S2 formes extrêmes,3,D,Expérience propre,0.12693604280716275,,4,47.0
+S2 formes extrêmes,3,D,Table de marché,0.6015652180148573,,4,47.0
+S2 formes extrêmes,3,D,Aléa global,0.5552076105703944,,4,47.0
+S2 formes extrêmes,3,D,Aléa bandes,0.5717324696778818,,4,47.0
+S2 formes extrêmes,3,D,Aléa LOO,0.6078662062045918,,4,47.0
+S2 formes extrêmes,3,E,Table OMS seule,0.28623309609646896,,3,28.0
+S2 formes extrêmes,3,E,Expérience propre,0.27276513545921144,,3,28.0
+S2 formes extrêmes,3,E,Table de marché,0.30774401234592014,,3,28.0
+S2 formes extrêmes,3,E,Aléa global,0.3073632221888538,,3,28.0
+S2 formes extrêmes,3,E,Aléa bandes,0.30347718196411516,,3,28.0
+S2 formes extrêmes,3,E,Aléa LOO,0.30968569696162157,,3,28.0
+S2 formes extrêmes,3,F,Table OMS seule,0.37864097549958725,,3,14.0
+S2 formes extrêmes,3,F,Expérience propre,0.07447666717083769,,3,14.0
+S2 formes extrêmes,3,F,Table de marché,0.24207430174791586,,3,14.0
+S2 formes extrêmes,3,F,Aléa global,0.1919174659004663,,3,14.0
+S2 formes extrêmes,3,F,Aléa bandes,0.1968945123229658,,3,14.0
+S2 formes extrêmes,3,F,Aléa LOO,0.20332835178920924,,3,14.0
+S2 formes extrêmes,4,A,Table OMS seule,0.37885239029397216,,1,259.0
+S2 formes extrêmes,4,A,Expérience propre,0.05952337547015511,,1,259.0
+S2 formes extrêmes,4,A,Table de marché,0.12541613121302056,,1,259.0
+S2 formes extrêmes,4,A,Aléa global,0.08790699485632045,,1,259.0
+S2 formes extrêmes,4,A,Aléa bandes,0.10199741524617732,,1,259.0
+S2 formes extrêmes,4,A,Aléa LOO,0.15573181319775922,,1,259.0
+S2 formes extrêmes,4,B,Table OMS seule,1.0337955198362287,,3,168.0
+S2 formes extrêmes,4,B,Expérience propre,0.11719771369173985,,3,168.0
+S2 formes extrêmes,4,B,Table de marché,0.8074085454162638,,3,168.0
+S2 formes extrêmes,4,B,Aléa global,0.8554437128778563,,3,168.0
+S2 formes extrêmes,4,B,Aléa bandes,0.8416232286529742,,3,168.0
+S2 formes extrêmes,4,B,Aléa LOO,1.0002287809818886,,3,168.0
+S2 formes extrêmes,4,C,Table OMS seule,0.5675930363748245,,3,95.0
+S2 formes extrêmes,4,C,Expérience propre,0.21552278835039052,,3,95.0
+S2 formes extrêmes,4,C,Table de marché,0.7283797185676956,,3,95.0
+S2 formes extrêmes,4,C,Aléa global,0.7423366713029419,,3,95.0
+S2 formes extrêmes,4,C,Aléa bandes,0.7452588537809,,3,95.0
+S2 formes extrêmes,4,C,Aléa LOO,1.0151203210115678,,3,95.0
+S2 formes extrêmes,4,D,Table OMS seule,0.7198663050167105,,3,48.0
+S2 formes extrêmes,4,D,Expérience propre,0.06262246115514215,,3,48.0
+S2 formes extrêmes,4,D,Table de marché,0.48168655908361735,,3,48.0
+S2 formes extrêmes,4,D,Aléa global,0.4660370130493639,,3,48.0
+S2 formes extrêmes,4,D,Aléa bandes,0.4653306282877395,,3,48.0
+S2 formes extrêmes,4,D,Aléa LOO,0.493595004294632,,3,48.0
+S2 formes extrêmes,4,E,Table OMS seule,0.28677435838785126,,3,28.0
+S2 formes extrêmes,4,E,Expérience propre,0.1438139313629899,,3,28.0
+S2 formes extrêmes,4,E,Table de marché,0.40276789094069276,,3,28.0
+S2 formes extrêmes,4,E,Aléa global,0.3988010578710457,,3,28.0
+S2 formes extrêmes,4,E,Aléa bandes,0.4006525332604773,,3,28.0
+S2 formes extrêmes,4,E,Aléa LOO,0.4156814055397057,,3,28.0
+S2 formes extrêmes,4,F,Table OMS seule,0.37885239029397216,,3,17.0
+S2 formes extrêmes,4,F,Expérience propre,0.3664733996441638,,3,17.0
+S2 formes extrêmes,4,F,Table de marché,0.12541613121302056,,3,17.0
+S2 formes extrêmes,4,F,Aléa global,0.11785613595193385,,3,17.0
+S2 formes extrêmes,4,F,Aléa bandes,0.10978848480814836,,3,17.0
+S2 formes extrêmes,4,F,Aléa LOO,0.10674853034069048,,3,17.0
+S2 formes extrêmes,5,A,Table OMS seule,0.377889481060727,,1,238.0
+S2 formes extrêmes,5,A,Expérience propre,0.07074963782515786,,1,238.0
+S2 formes extrêmes,5,A,Table de marché,0.15262196855580537,,1,238.0
+S2 formes extrêmes,5,A,Aléa global,0.0835842092448075,,1,238.0
+S2 formes extrêmes,5,A,Aléa bandes,0.1401610892756634,,1,238.0
+S2 formes extrêmes,5,A,Aléa LOO,0.19724948926096136,,1,238.0
+S2 formes extrêmes,5,B,Table OMS seule,1.022323925435815,,3,164.0
+S2 formes extrêmes,5,B,Expérience propre,0.19223402476824333,,3,164.0
+S2 formes extrêmes,5,B,Table de marché,0.8499951246151138,,3,164.0
+S2 formes extrêmes,5,B,Aléa global,0.9127296156595202,,3,164.0
+S2 formes extrêmes,5,B,Aléa bandes,0.8727960606070655,,3,164.0
+S2 formes extrêmes,5,B,Aléa LOO,1.0243728000216668,,3,164.0
+S2 formes extrêmes,5,C,Table OMS seule,0.5648620727398288,,3,107.0
+S2 formes extrêmes,5,C,Expérience propre,0.12579768870195218,,3,107.0
+S2 formes extrêmes,5,C,Table de marché,0.6674687698873133,,3,107.0
+S2 formes extrêmes,5,C,Aléa global,0.663059462464903,,3,107.0
+S2 formes extrêmes,5,C,Aléa bandes,0.6662099392424833,,3,107.0
+S2 formes extrêmes,5,C,Aléa LOO,0.8873560083547432,,3,107.0
+S2 formes extrêmes,5,D,Table OMS seule,0.7124524580004086,,3,55.0
+S2 formes extrêmes,5,D,Expérience propre,0.15885080552101596,,3,55.0
+S2 formes extrêmes,5,D,Table de marché,0.5259212006084911,,3,55.0
+S2 formes extrêmes,5,D,Aléa global,0.51418826826631,,3,55.0
+S2 formes extrêmes,5,D,Aléa bandes,0.5123764356085081,,3,55.0
+S2 formes extrêmes,5,D,Aléa LOO,0.5342882359318796,,3,55.0
+S2 formes extrêmes,5,E,Table OMS seule,0.2868987431413423,,3,22.0
+S2 formes extrêmes,5,E,Expérience propre,0.2874644873654185,,3,22.0
+S2 formes extrêmes,5,E,Table de marché,0.3454235946220387,,3,22.0
+S2 formes extrêmes,5,E,Aléa global,0.35573939577062313,,3,22.0
+S2 formes extrêmes,5,E,Aléa bandes,0.3575357531138742,,3,22.0
+S2 formes extrêmes,5,E,Aléa LOO,0.3694379227856136,,3,22.0
+S2 formes extrêmes,5,F,Table OMS seule,0.377889481060727,,3,20.0
+S2 formes extrêmes,5,F,Expérience propre,0.24142442212296455,,3,20.0
+S2 formes extrêmes,5,F,Table de marché,0.15262196855580537,,3,20.0
+S2 formes extrêmes,5,F,Aléa global,0.155595471741815,,3,20.0
+S2 formes extrêmes,5,F,Aléa bandes,0.144334456713756,,3,20.0
+S2 formes extrêmes,5,F,Aléa LOO,0.1425589947324839,,3,20.0
+S3 très petits porteurs,0,A,Table OMS seule,0.378039130621306,,3,13.0
+S3 très petits porteurs,0,A,Expérience propre,0.2991068016372317,,3,13.0
+S3 très petits porteurs,0,A,Table de marché,0.6094518001529868,,3,13.0
+S3 très petits porteurs,0,A,Aléa global,0.6093809571060592,,3,13.0
+S3 très petits porteurs,0,A,Aléa bandes,0.6093909489924427,,3,13.0
+S3 très petits porteurs,0,A,Aléa LOO,0.6165475444012217,,3,13.0
+S3 très petits porteurs,0,B,Table OMS seule,0.4617679802078466,,3,6.0
+S3 très petits porteurs,0,B,Expérience propre,1.1679449676148648,,3,6.0
+S3 très petits porteurs,0,B,Table de marché,0.5168650959523685,,3,6.0
+S3 très petits porteurs,0,B,Aléa global,0.5169279501707422,,3,6.0
+S3 très petits porteurs,0,B,Aléa bandes,0.516916184261392,,3,6.0
+S3 très petits porteurs,0,B,Aléa LOO,0.4296689215265339,,3,6.0
+S3 très petits porteurs,0,C,Table OMS seule,0.2968134112528839,,2,11.0
+S3 très petits porteurs,0,C,Expérience propre,0.16494546301488214,,2,11.0
+S3 très petits porteurs,0,C,Table de marché,0.7116341965024915,,2,11.0
+S3 très petits porteurs,0,C,Aléa global,0.7116624960048205,,2,11.0
+S3 très petits porteurs,0,C,Aléa bandes,0.7116654203836753,,2,11.0
+S3 très petits porteurs,0,C,Aléa LOO,0.8356369398463744,,2,11.0
+S3 très petits porteurs,0,D,Table OMS seule,0.6099474046942581,,0,6.0
+S3 très petits porteurs,0,D,Expérience propre,0.3131298659308641,,0,6.0
+S3 très petits porteurs,0,D,Table de marché,0.368685671465957,,0,6.0
+S3 très petits porteurs,0,D,Aléa global,0.36872909718629565,,0,6.0
+S3 très petits porteurs,0,D,Aléa bandes,0.368685671465957,,0,6.0
+S3 très petits porteurs,0,D,Aléa LOO,0.27836648433195044,,0,6.0
+S3 très petits porteurs,0,E,Table OMS seule,0.2827289508169811,,0,7.0
+S3 très petits porteurs,0,E,Expérience propre,0.6772208745690543,,0,7.0
+S3 très petits porteurs,0,E,Table de marché,0.6982547585936638,,0,7.0
+S3 très petits porteurs,0,E,Aléa global,0.6982183179912719,,0,7.0
+S3 très petits porteurs,0,E,Aléa bandes,0.6982547585936638,,0,7.0
+S3 très petits porteurs,0,E,Aléa LOO,0.7987070646519309,,0,7.0
+S3 très petits porteurs,1,A,Table OMS seule,0.3797746852258473,,3,16.0
+S3 très petits porteurs,1,A,Expérience propre,0.6623582554382101,,3,16.0
+S3 très petits porteurs,1,A,Table de marché,0.4087578444620172,,3,16.0
+S3 très petits porteurs,1,A,Aléa global,0.4088008949735128,,3,16.0
+S3 très petits porteurs,1,A,Aléa bandes,0.4087769096561589,,3,16.0
+S3 très petits porteurs,1,A,Aléa LOO,0.4496919366898705,,3,16.0
+S3 très petits porteurs,1,B,Table OMS seule,0.46777279470931526,,3,11.0
+S3 très petits porteurs,1,B,Expérience propre,0.661189928113617,,3,11.0
+S3 très petits porteurs,1,B,Table de marché,0.48881539445724725,,3,11.0
+S3 très petits porteurs,1,B,Aléa global,0.4887066704809906,,3,11.0
+S3 très petits porteurs,1,B,Aléa bandes,0.48870204338649037,,3,11.0
+S3 très petits porteurs,1,B,Aléa LOO,0.5362021133775184,,3,11.0
+S3 très petits porteurs,1,C,Table OMS seule,0.2942797059604976,,2,10.0
+S3 très petits porteurs,1,C,Expérience propre,0.21695595467879475,,2,10.0
+S3 très petits porteurs,1,C,Table de marché,0.3777312355775072,,2,10.0
+S3 très petits porteurs,1,C,Aléa global,0.3778008450115575,,2,10.0
+S3 très petits porteurs,1,C,Aléa bandes,0.3778016313176704,,2,10.0
+S3 très petits porteurs,1,C,Aléa LOO,0.2967040161037221,,2,10.0
+S3 très petits porteurs,1,D,Table OMS seule,0.6191541641184225,,0,8.0
+S3 très petits porteurs,1,D,Expérience propre,0.5375592581304892,,0,8.0
+S3 très petits porteurs,1,D,Table de marché,0.5975466833783185,,0,8.0
+S3 très petits porteurs,1,D,Aléa global,0.5975958512559228,,0,8.0
+S3 très petits porteurs,1,D,Aléa bandes,0.5975466833783185,,0,8.0
+S3 très petits porteurs,1,D,Aléa LOO,0.6559418142721619,,0,8.0
+S3 très petits porteurs,1,E,Table OMS seule,0.28446450542152235,,0,6.0
+S3 très petits porteurs,1,E,Expérience propre,0.2864757771904714,,0,6.0
+S3 très petits porteurs,1,E,Table de marché,0.3947766239887995,,0,6.0
+S3 très petits porteurs,1,E,Aléa global,0.3947527413598086,,0,6.0
+S3 très petits porteurs,1,E,Aléa bandes,0.3947766239887995,,0,6.0
+S3 très petits porteurs,1,E,Aléa LOO,0.406797530622023,,0,6.0
+S3 très petits porteurs,2,A,Table OMS seule,0.39318064503278477,,3,15.0
+S3 très petits porteurs,2,A,Expérience propre,0.24644069803027832,,3,15.0
+S3 très petits porteurs,2,A,Table de marché,0.4022090118829477,,3,15.0
+S3 très petits porteurs,2,A,Aléa global,0.4021479947526887,,3,15.0
+S3 très petits porteurs,2,A,Aléa bandes,0.4020993299707696,,3,15.0
+S3 très petits porteurs,2,A,Aléa LOO,0.7079820398327927,,3,15.0
+S3 très petits porteurs,2,B,Table OMS seule,0.512093423870776,,3,7.0
+S3 très petits porteurs,2,B,Expérience propre,0.6049332952396859,,3,7.0
+S3 très petits porteurs,2,B,Table de marché,0.47286001627786817,,3,7.0
+S3 très petits porteurs,2,B,Aléa global,0.47295541118796064,,3,7.0
+S3 très petits porteurs,2,B,Aléa bandes,0.47291125035574383,,3,7.0
+S3 très petits porteurs,2,B,Aléa LOO,0.5093002180715209,,3,7.0
+S3 très petits porteurs,2,C,Table OMS seule,0.27677099641291214,,3,8.0
+S3 très petits porteurs,2,C,Expérience propre,0.24574516438771382,,3,8.0
+S3 très petits porteurs,2,C,Table de marché,0.3910351951586914,,3,8.0
+S3 très petits porteurs,2,C,Aléa global,0.39102435962132154,,3,8.0
+S3 très petits porteurs,2,C,Aléa bandes,0.39103649999072204,,3,8.0
+S3 très petits porteurs,2,C,Aléa LOO,0.43593991396621656,,3,8.0
+S3 très petits porteurs,2,D,Table OMS seule,0.6866607952957756,,0,8.0
+S3 très petits porteurs,2,D,Expérience propre,8.163221254132903,,0,8.0
+S3 très petits porteurs,2,D,Table de marché,0.5669627788038495,,0,8.0
+S3 très petits porteurs,2,D,Aléa global,0.5669413795826015,,0,8.0
+S3 très petits porteurs,2,D,Aléa bandes,0.5669627788038495,,0,8.0
+S3 très petits porteurs,2,D,Aléa LOO,0.6352305462734963,,0,8.0
+S3 très petits porteurs,2,E,Table OMS seule,0.29787046522845984,,0,4.0
+S3 très petits porteurs,2,E,Expérience propre,7.654657344239171,,0,4.0
+S3 très petits porteurs,2,E,Table de marché,0.41679762500396317,,0,4.0
+S3 très petits porteurs,2,E,Aléa global,0.41681498903898,,0,4.0
+S3 très petits porteurs,2,E,Aléa bandes,0.41679762500396317,,0,4.0
+S3 très petits porteurs,2,E,Aléa LOO,0.3959777130599988,,0,4.0
+S3 très petits porteurs,3,A,Table OMS seule,0.3843904414055078,,3,13.0
+S3 très petits porteurs,3,A,Expérience propre,0.27296889790509193,,3,13.0
+S3 très petits porteurs,3,A,Table de marché,0.30110915109989583,,3,13.0
+S3 très petits porteurs,3,A,Aléa global,0.3011594718938165,,3,13.0
+S3 très petits porteurs,3,A,Aléa bandes,0.3011511146029305,,3,13.0
+S3 très petits porteurs,3,A,Aléa LOO,0.3827494428282797,,3,13.0
+S3 très petits porteurs,3,B,Table OMS seule,0.483288920780009,,3,13.0
+S3 très petits porteurs,3,B,Expérience propre,0.3600457540442785,,3,13.0
+S3 très petits porteurs,3,B,Table de marché,0.3491835014638182,,3,13.0
+S3 très petits porteurs,3,B,Aléa global,0.349117047290801,,3,13.0
+S3 très petits porteurs,3,B,Aléa bandes,0.3491355413075707,,3,13.0
+S3 très petits porteurs,3,B,Aléa LOO,0.5486220945780771,,3,13.0
+S3 très petits porteurs,3,C,Table OMS seule,0.2879950922491251,,2,4.0
+S3 très petits porteurs,3,C,Expérience propre,1.2662903666908771,,2,4.0
+S3 très petits porteurs,3,C,Table de marché,0.29489216659045797,,2,4.0
+S3 très petits porteurs,3,C,Aléa global,0.29498175376009783,,2,4.0
+S3 très petits porteurs,3,C,Aléa bandes,0.29499074825476257,,2,4.0
+S3 très petits porteurs,3,C,Aléa LOO,0.20445375722059345,,2,4.0
+S3 très petits porteurs,3,D,Table OMS seule,0.6428455676073911,,0,6.0
+S3 très petits porteurs,3,D,Expérience propre,0.6788546685208446,,0,6.0
+S3 très petits porteurs,3,D,Table de marché,0.423148399376153,,0,6.0
+S3 très petits porteurs,3,D,Aléa global,0.42315426173934667,,0,6.0
+S3 très petits porteurs,3,D,Aléa bandes,0.423148399376153,,0,6.0
+S3 très petits porteurs,3,D,Aléa LOO,0.4647159217367467,,0,6.0
+S3 très petits porteurs,3,E,Table OMS seule,0.28908026160118294,,0,6.0
+S3 très petits porteurs,3,E,Expérience propre,0.7771586460475292,,0,6.0
+S3 très petits porteurs,3,E,Table de marché,0.337584065448566,,0,6.0
+S3 très petits porteurs,3,E,Aléa global,0.33755222569629156,,0,6.0
+S3 très petits porteurs,3,E,Aléa bandes,0.337584065448566,,0,6.0
+S3 très petits porteurs,3,E,Aléa LOO,0.37244209586915283,,0,6.0
+S3 très petits porteurs,4,A,Table OMS seule,0.3771027376452271,,3,12.0
+S3 très petits porteurs,4,A,Expérience propre,0.3071454459040023,,3,12.0
+S3 très petits porteurs,4,A,Table de marché,0.11134429781787358,,3,12.0
+S3 très petits porteurs,4,A,Aléa global,0.11128899445749325,,3,12.0
+S3 très petits porteurs,4,A,Aléa bandes,0.11132472380740398,,3,12.0
+S3 très petits porteurs,4,A,Aléa LOO,0.24783531294514935,,3,12.0
+S3 très petits porteurs,4,B,Table OMS seule,0.4592181989686273,,2,16.0
+S3 très petits porteurs,4,B,Expérience propre,0.35730819185242507,,2,16.0
+S3 très petits porteurs,4,B,Table de marché,0.0816974803859788,,2,16.0
+S3 très petits porteurs,4,B,Aléa global,0.08166527977149594,,2,16.0
+S3 très petits porteurs,4,B,Aléa bandes,0.08163572815104768,,2,16.0
+S3 très petits porteurs,4,B,Aléa LOO,0.23169868818423453,,2,16.0
+S3 très petits porteurs,4,C,Table OMS seule,0.2974904065399456,,2,9.0
+S3 très petits porteurs,4,C,Expérience propre,0.14786817697841723,,2,9.0
+S3 très petits porteurs,4,C,Table de marché,0.21692712432871158,,2,9.0
+S3 très petits porteurs,4,C,Aléa global,0.2169470036212361,,2,9.0
+S3 très petits porteurs,4,C,Aléa bandes,0.21694641427199518,,2,9.0
+S3 très petits porteurs,4,C,Aléa LOO,0.16185489910827625,,2,9.0
+S3 très petits porteurs,4,D,Table OMS seule,0.6061875822576833,,0,6.0
+S3 très petits porteurs,4,D,Expérience propre,0.8079374682917486,,0,6.0
+S3 très petits porteurs,4,D,Table de marché,0.22126156112533782,,0,6.0
+S3 très petits porteurs,4,D,Aléa global,0.2211921371926236,,0,6.0
+S3 très petits porteurs,4,D,Aléa bandes,0.22126156112533782,,0,6.0
+S3 très petits porteurs,4,D,Aléa LOO,0.2638426388354645,,0,6.0
+S3 très petits porteurs,4,E,Table OMS seule,0.28179255784090224,,0,3.0
+S3 très petits porteurs,4,E,Expérience propre,0.6947263994075156,,0,3.0
+S3 très petits porteurs,4,E,Table de marché,0.14256182476999535,,0,3.0
+S3 très petits porteurs,4,E,Aléa global,0.14252954184398425,,0,3.0
+S3 très petits porteurs,4,E,Aléa bandes,0.14256182476999535,,0,3.0
+S3 très petits porteurs,4,E,Aléa LOO,0.22870029296412972,,0,3.0
+S3 très petits porteurs,5,A,Table OMS seule,0.37886898127213803,,3,11.0
+S3 très petits porteurs,5,A,Expérience propre,0.30120025971623493,,3,11.0
+S3 très petits porteurs,5,A,Table de marché,0.11867800773110201,,3,11.0
+S3 très petits porteurs,5,A,Aléa global,0.11867894933031137,,3,11.0
+S3 très petits porteurs,5,A,Aléa bandes,0.11859670341563801,,3,11.0
+S3 très petits porteurs,5,A,Aléa LOO,0.3622851140939718,,3,11.0
+S3 très petits porteurs,5,B,Table OMS seule,0.4648406686342466,,2,8.0
+S3 très petits porteurs,5,B,Expérience propre,0.18922185146799828,,2,8.0
+S3 très petits porteurs,5,B,Table de marché,0.23332786932178418,,2,8.0
+S3 très petits porteurs,5,B,Aléa global,0.23327269335700607,,2,8.0
+S3 très petits porteurs,5,B,Aléa bandes,0.23332602567678196,,2,8.0
+S3 très petits porteurs,5,B,Aléa LOO,0.17495457263415753,,2,8.0
+S3 très petits porteurs,5,C,Table OMS seule,0.2954004241281482,,2,8.0
+S3 très petits porteurs,5,C,Expérience propre,0.4476532587719016,,2,8.0
+S3 très petits porteurs,5,C,Table de marché,0.0650139263669491,,2,8.0
+S3 très petits porteurs,5,C,Aléa global,0.06500945026775727,,2,8.0
+S3 très petits porteurs,5,C,Aléa bandes,0.06501436156631002,,2,8.0
+S3 très petits porteurs,5,C,Aléa LOO,0.09929252726737019,,2,8.0
+S3 très petits porteurs,5,D,Table OMS seule,0.6147022214523339,,0,3.0
+S3 très petits porteurs,5,D,Expérience propre,9.033131701979034,,0,3.0
+S3 très petits porteurs,5,D,Table de marché,0.38294972491346363,,0,3.0
+S3 très petits porteurs,5,D,Aléa global,0.3829716125904606,,0,3.0
+S3 très petits porteurs,5,D,Aléa bandes,0.38294972491346363,,0,3.0
+S3 très petits porteurs,5,D,Aléa LOO,0.36970454511767714,,0,3.0
+S3 très petits porteurs,5,E,Table OMS seule,0.2835588014678132,,0,5.0
+S3 très petits porteurs,5,E,Expérience propre,9.422115678598946,,0,5.0
+S3 très petits porteurs,5,E,Table de marché,0.06287912720698183,,0,5.0
+S3 très petits porteurs,5,E,Aléa global,0.06287433337476364,,0,5.0
+S3 très petits porteurs,5,E,Aléa bandes,0.06287912720698183,,0,5.0
+S3 très petits porteurs,5,E,Aléa LOO,0.06813816363641444,,0,5.0
+S4 marché dominé,0,Dom,Table OMS seule,0.7635239572245451,,0,827.0
+S4 marché dominé,0,Dom,Expérience propre,0.05577645411256038,,0,827.0
+S4 marché dominé,0,Dom,Table de marché,0.031101459987422798,,0,827.0
+S4 marché dominé,0,Dom,Aléa global,0.02940472633786055,,0,827.0
+S4 marché dominé,0,Dom,Aléa bandes,0.030475048439815213,,0,827.0
+S4 marché dominé,0,Dom,Aléa LOO,0.7353126857605838,,0,827.0
+S4 marché dominé,0,b1,Table OMS seule,0.38187392547639465,,3,34.0
+S4 marché dominé,0,b1,Expérience propre,0.023982687653259623,,3,34.0
+S4 marché dominé,0,b1,Table de marché,0.4830166480171095,,3,34.0
+S4 marché dominé,0,b1,Aléa global,0.4831278618649024,,3,34.0
+S4 marché dominé,0,b1,Aléa bandes,0.4830745211295511,,3,34.0
+S4 marché dominé,0,b1,Aléa LOO,0.5263135970207583,,3,34.0
+S4 marché dominé,0,b2,Table OMS seule,0.38187392547639465,,3,21.0
+S4 marché dominé,0,b2,Expérience propre,0.21443439970236688,,3,21.0
+S4 marché dominé,0,b2,Table de marché,0.4830166480171095,,3,21.0
+S4 marché dominé,0,b2,Aléa global,0.4831065710293147,,3,21.0
+S4 marché dominé,0,b2,Aléa bandes,0.48304773474525103,,3,21.0
+S4 marché dominé,0,b2,Aléa LOO,0.49994554965694915,,3,21.0
+S4 marché dominé,0,b3,Table OMS seule,0.4512075262589136,,3,21.0
+S4 marché dominé,0,b3,Expérience propre,0.12910814160743625,,3,21.0
+S4 marché dominé,0,b3,Table de marché,0.390110315824328,,3,21.0
+S4 marché dominé,0,b3,Aléa global,0.39011355132399844,,3,21.0
+S4 marché dominé,0,b3,Aléa bandes,0.39010011178815135,,3,21.0
+S4 marché dominé,0,b3,Aléa LOO,0.3956859663818729,,3,21.0
+S4 marché dominé,0,b4,Table OMS seule,0.38187392547639465,,3,10.0
+S4 marché dominé,0,b4,Expérience propre,0.7543750085813091,,3,10.0
+S4 marché dominé,0,b4,Table de marché,0.4830166480171095,,3,10.0
+S4 marché dominé,0,b4,Aléa global,0.48310570634625705,,3,10.0
+S4 marché dominé,0,b4,Aléa bandes,0.4830542513478207,,3,10.0
+S4 marché dominé,0,b4,Aléa LOO,0.48291359081642404,,3,10.0
+S4 marché dominé,1,Dom,Table OMS seule,0.7599294728941804,,0,826.0
+S4 marché dominé,1,Dom,Expérience propre,0.0459540920510268,,0,826.0
+S4 marché dominé,1,Dom,Table de marché,0.05762939095934591,,0,826.0
+S4 marché dominé,1,Dom,Aléa global,0.05805251123854092,,0,826.0
+S4 marché dominé,1,Dom,Aléa bandes,0.05774862307205037,,0,826.0
+S4 marché dominé,1,Dom,Aléa LOO,0.4618270611682254,,0,826.0
+S4 marché dominé,1,b1,Table OMS seule,0.3808272417755886,,3,37.0
+S4 marché dominé,1,b1,Expérience propre,0.23556739560691176,,3,37.0
+S4 marché dominé,1,b1,Table de marché,0.4309331339378737,,3,37.0
+S4 marché dominé,1,b1,Aléa global,0.4310875772362232,,3,37.0
+S4 marché dominé,1,b1,Aléa bandes,0.4310932401101645,,3,37.0
+S4 marché dominé,1,b1,Aléa LOO,0.42008712612813975,,3,37.0
+S4 marché dominé,1,b2,Table OMS seule,0.3808272417755886,,3,33.0
+S4 marché dominé,1,b2,Expérience propre,0.3667546641573325,,3,33.0
+S4 marché dominé,1,b2,Table de marché,0.4309331339378737,,3,33.0
+S4 marché dominé,1,b2,Aléa global,0.4306748309960022,,3,33.0
+S4 marché dominé,1,b2,Aléa bandes,0.43076132918224314,,3,33.0
+S4 marché dominé,1,b2,Aléa LOO,0.45747735806122164,,3,33.0
+S4 marché dominé,1,b3,Table OMS seule,0.44886694026409574,,3,17.0
+S4 marché dominé,1,b3,Expérience propre,0.24271903212569249,,3,17.0
+S4 marché dominé,1,b3,Table de marché,0.33847714825159164,,3,17.0
+S4 marché dominé,1,b3,Aléa global,0.3385847689062023,,3,17.0
+S4 marché dominé,1,b3,Aléa bandes,0.3385572881475663,,3,17.0
+S4 marché dominé,1,b3,Aléa LOO,0.33408251247661164,,3,17.0
+S4 marché dominé,1,b4,Table OMS seule,0.3808272417755886,,3,7.0
+S4 marché dominé,1,b4,Expérience propre,0.6467868819126439,,3,7.0
+S4 marché dominé,1,b4,Table de marché,0.4309331339378737,,3,7.0
+S4 marché dominé,1,b4,Aléa global,0.43097860710341906,,3,7.0
+S4 marché dominé,1,b4,Aléa bandes,0.43096652898508886,,3,7.0
+S4 marché dominé,1,b4,Aléa LOO,0.42997917045913964,,3,7.0
+S4 marché dominé,2,Dom,Table OMS seule,0.7648837899690922,,0,842.0
+S4 marché dominé,2,Dom,Expérience propre,0.09986368245903929,,0,842.0
+S4 marché dominé,2,Dom,Table de marché,0.06292972299791315,,0,842.0
+S4 marché dominé,2,Dom,Aléa global,0.051004894313478266,,0,842.0
+S4 marché dominé,2,Dom,Aléa bandes,0.0747231697436191,,0,842.0
+S4 marché dominé,2,Dom,Aléa LOO,0.562267114022231,,0,842.0
+S4 marché dominé,2,b1,Table OMS seule,0.3815561911948655,,3,46.0
+S4 marché dominé,2,b1,Expérience propre,0.20957069862834435,,3,46.0
+S4 marché dominé,2,b1,Table de marché,0.4827725947308655,,3,46.0
+S4 marché dominé,2,b1,Aléa global,0.4636734067022648,,3,46.0
+S4 marché dominé,2,b1,Aléa bandes,0.4800184658564837,,3,46.0
+S4 marché dominé,2,b1,Aléa LOO,0.49944227182822204,,3,46.0
+S4 marché dominé,2,b2,Table OMS seule,0.3815561911948655,,3,28.0
+S4 marché dominé,2,b2,Expérience propre,0.18011343257165655,,3,28.0
+S4 marché dominé,2,b2,Table de marché,0.4827725947308655,,3,28.0
+S4 marché dominé,2,b2,Aléa global,0.4810519644027774,,3,28.0
+S4 marché dominé,2,b2,Aléa bandes,0.47972371112319023,,3,28.0
+S4 marché dominé,2,b2,Aléa LOO,0.4866980727363791,,3,28.0
+S4 marché dominé,2,b3,Table OMS seule,0.4504108655426123,,3,18.0
+S4 marché dominé,2,b3,Expérience propre,0.5550310668564137,,3,18.0
+S4 marché dominé,2,b3,Table de marché,0.3895354044222855,,3,18.0
+S4 marché dominé,2,b3,Aléa global,0.3857425830150183,,3,18.0
+S4 marché dominé,2,b3,Aléa bandes,0.4009442864587034,,3,18.0
+S4 marché dominé,2,b3,Aléa LOO,0.42065665690399306,,3,18.0
+S4 marché dominé,2,b4,Table OMS seule,0.3815561911948655,,3,13.0
+S4 marché dominé,2,b4,Expérience propre,0.5035518622764026,,3,13.0
+S4 marché dominé,2,b4,Table de marché,0.4827725947308655,,3,13.0
+S4 marché dominé,2,b4,Aléa global,0.47480626472963383,,3,13.0
+S4 marché dominé,2,b4,Aléa bandes,0.48303987906867163,,3,13.0
+S4 marché dominé,2,b4,Aléa LOO,0.49493340038907846,,3,13.0
+S4 marché dominé,3,Dom,Table OMS seule,0.7593261746897468,,0,818.0
+S4 marché dominé,3,Dom,Expérience propre,0.06801691769745247,,0,818.0
+S4 marché dominé,3,Dom,Table de marché,0.04057878916701255,,0,818.0
+S4 marché dominé,3,Dom,Aléa global,0.043217120738123484,,0,818.0
+S4 marché dominé,3,Dom,Aléa bandes,0.04632981596982397,,0,818.0
+S4 marché dominé,3,Dom,Aléa LOO,0.6838544417310936,,0,818.0
+S4 marché dominé,3,b1,Table OMS seule,0.38071351676316384,,4,31.0
+S4 marché dominé,3,b1,Expérience propre,0.17237623567812438,,4,31.0
+S4 marché dominé,3,b1,Table de marché,0.4640562605668815,,4,31.0
+S4 marché dominé,3,b1,Aléa global,0.4714742575966783,,4,31.0
+S4 marché dominé,3,b1,Aléa bandes,0.46690937375594743,,4,31.0
+S4 marché dominé,3,b1,Aléa LOO,0.47410180311981276,,4,31.0
+S4 marché dominé,3,b2,Table OMS seule,0.38071351676316384,,3,14.0
+S4 marché dominé,3,b2,Expérience propre,0.9853482277854971,,3,14.0
+S4 marché dominé,3,b2,Table de marché,0.4640562605668815,,3,14.0
+S4 marché dominé,3,b2,Aléa global,0.4917266270593179,,3,14.0
+S4 marché dominé,3,b2,Aléa bandes,0.4811641688091417,,3,14.0
+S4 marché dominé,3,b2,Aléa LOO,0.48011974009830144,,3,14.0
+S4 marché dominé,3,b3,Table OMS seule,0.4486174828924749,,3,17.0
+S4 marché dominé,3,b3,Expérience propre,0.35325706706524507,,3,17.0
+S4 marché dominé,3,b3,Table de marché,0.37163960398024765,,3,17.0
+S4 marché dominé,3,b3,Aléa global,0.37063524570940687,,3,17.0
+S4 marché dominé,3,b3,Aléa bandes,0.36429808318604234,,3,17.0
+S4 marché dominé,3,b3,Aléa LOO,0.3702292506518883,,3,17.0
+S4 marché dominé,3,b4,Table OMS seule,0.38071351676316384,,3,13.0
+S4 marché dominé,3,b4,Expérience propre,0.5458126731983312,,3,13.0
+S4 marché dominé,3,b4,Table de marché,0.4640562605668815,,3,13.0
+S4 marché dominé,3,b4,Aléa global,0.4642875976578452,,3,13.0
+S4 marché dominé,3,b4,Aléa bandes,0.47193754396007787,,3,13.0
+S4 marché dominé,3,b4,Aléa LOO,0.4799373349081522,,3,13.0
+S4 marché dominé,4,Dom,Table OMS seule,0.7642939907771802,,0,900.0
+S4 marché dominé,4,Dom,Expérience propre,0.04919135932714004,,0,900.0
+S4 marché dominé,4,Dom,Table de marché,0.09090443360414609,,0,900.0
+S4 marché dominé,4,Dom,Aléa global,0.09122731893184627,,0,900.0
+S4 marché dominé,4,Dom,Aléa bandes,0.09025996408483418,,0,900.0
+S4 marché dominé,4,Dom,Aléa LOO,0.7754693913434475,,0,900.0
+S4 marché dominé,4,b1,Table OMS seule,0.38200584468398796,,3,37.0
+S4 marché dominé,4,b1,Expérience propre,0.3627141709735863,,3,37.0
+S4 marché dominé,4,b1,Table de marché,0.4075929776335959,,3,37.0
+S4 marché dominé,4,b1,Aléa global,0.40760193131422884,,3,37.0
+S4 marché dominé,4,b1,Aléa bandes,0.40748932371528757,,3,37.0
+S4 marché dominé,4,b1,Aléa LOO,0.4677890832541063,,3,37.0
+S4 marché dominé,4,b2,Table OMS seule,0.38200584468398796,,3,32.0
+S4 marché dominé,4,b2,Expérience propre,0.29485345340181895,,3,32.0
+S4 marché dominé,4,b2,Table de marché,0.4075929776335959,,3,32.0
+S4 marché dominé,4,b2,Aléa global,0.40749296420121817,,3,32.0
+S4 marché dominé,4,b2,Aléa bandes,0.4075628686209611,,3,32.0
+S4 marché dominé,4,b2,Aléa LOO,0.4273274803463485,,3,32.0
+S4 marché dominé,4,b3,Table OMS seule,0.4514815184618664,,3,19.0
+S4 marché dominé,4,b3,Expérience propre,0.14990045994278295,,3,19.0
+S4 marché dominé,4,b3,Table de marché,0.3155161381153301,,3,19.0
+S4 marché dominé,4,b3,Aléa global,0.3155413464614594,,3,19.0
+S4 marché dominé,4,b3,Aléa bandes,0.31555250627650866,,3,19.0
+S4 marché dominé,4,b3,Aléa LOO,0.3287808484955876,,3,19.0
+S4 marché dominé,4,b4,Table OMS seule,0.38200584468398796,,3,8.0
+S4 marché dominé,4,b4,Expérience propre,0.8040542139970406,,3,8.0
+S4 marché dominé,4,b4,Table de marché,0.4075929776335959,,3,8.0
+S4 marché dominé,4,b4,Aléa global,0.40767803699417227,,3,8.0
+S4 marché dominé,4,b4,Aléa bandes,0.40765736850411066,,3,8.0
+S4 marché dominé,4,b4,Aléa LOO,0.4004405420861386,,3,8.0
+S4 marché dominé,5,Dom,Table OMS seule,0.7607225557379065,,0,860.0
+S4 marché dominé,5,Dom,Expérience propre,0.045637663524201934,,0,860.0
+S4 marché dominé,5,Dom,Table de marché,0.12338565653666182,,0,860.0
+S4 marché dominé,5,Dom,Aléa global,0.12495625192163257,,0,860.0
+S4 marché dominé,5,Dom,Aléa bandes,0.12392093476036914,,0,860.0
+S4 marché dominé,5,Dom,Aléa LOO,0.7771446759340714,,0,860.0
+S4 marché dominé,5,b1,Table OMS seule,0.3813111631814509,,3,35.0
+S4 marché dominé,5,b1,Expérience propre,0.2572177435469037,,3,35.0
+S4 marché dominé,5,b1,Table de marché,0.3468743436901961,,3,35.0
+S4 marché dominé,5,b1,Aléa global,0.3469100512302064,,3,35.0
+S4 marché dominé,5,b1,Aléa bandes,0.34684030734247245,,3,35.0
+S4 marché dominé,5,b1,Aléa LOO,0.38303208557426516,,3,35.0
+S4 marché dominé,5,b2,Table OMS seule,0.3813111631814509,,3,30.0
+S4 marché dominé,5,b2,Expérience propre,0.23163053643483214,,3,30.0
+S4 marché dominé,5,b2,Table de marché,0.3468743436901961,,3,30.0
+S4 marché dominé,5,b2,Aléa global,0.34679671606222945,,3,30.0
+S4 marché dominé,5,b2,Aléa bandes,0.34686352551323846,,3,30.0
+S4 marché dominé,5,b2,Aléa LOO,0.37169215526155075,,3,30.0
+S4 marché dominé,5,b3,Table OMS seule,0.44995748405571256,,3,14.0
+S4 marché dominé,5,b3,Expérience propre,0.7399493810711608,,3,14.0
+S4 marché dominé,5,b3,Table de marché,0.25436947685708716,,3,14.0
+S4 marché dominé,5,b3,Aléa global,0.2545055049519445,,3,14.0
+S4 marché dominé,5,b3,Aléa bandes,0.254436842370929,,3,14.0
+S4 marché dominé,5,b3,Aléa LOO,0.25233472555334213,,3,14.0
+S4 marché dominé,5,b4,Table OMS seule,0.3813111631814509,,3,16.0
+S4 marché dominé,5,b4,Expérience propre,0.2408315343643385,,3,16.0
+S4 marché dominé,5,b4,Table de marché,0.3468743436901961,,3,16.0
+S4 marché dominé,5,b4,Aléa global,0.34684025565896737,,3,16.0
+S4 marché dominé,5,b4,Aléa bandes,0.34683519000498014,,3,16.0
+S4 marché dominé,5,b4,Aléa LOO,0.3463030308558311,,3,16.0

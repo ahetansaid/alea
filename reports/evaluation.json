@@ -1,0 +1,477 @@
+{
+  "mapping": {
+    "alpha": {
+      "correctes": 8,
+      "total": 8,
+      "moteur": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    },
+    "beta": {
+      "correctes": 8,
+      "total": 8,
+      "moteur": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    },
+    "gamma": {
+      "correctes": 8,
+      "total": 8,
+      "moteur": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    },
+    "delta": {
+      "correctes": 8,
+      "total": 8,
+      "moteur": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    }
+  },
+  "quality": {
+    "alpha": [
+      {
+        "type d'erreur": "birth_after_entry",
+        "injectées": 82,
+        "signalées": 82,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "death_without_date",
+        "injectées": 54,
+        "signalées": 54,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "duplicate",
+        "injectées": 136,
+        "signalées": 136,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "exit_before_entry",
+        "injectées": 82,
+        "signalées": 82,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "future_date",
+        "injectées": 82,
+        "signalées": 82,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "impossible_age",
+        "injectées": 82,
+        "signalées": 82,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "invalid_sex",
+        "injectées": 82,
+        "signalées": 82,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "sum_assured_typo",
+        "injectées": 109,
+        "signalées": 103,
+        "précision": 1.0,
+        "rappel": 0.945
+      },
+      {
+        "type d'erreur": "TOTAL",
+        "injectées": 709,
+        "signalées": 703,
+        "précision": 1.0,
+        "rappel": 0.992
+      }
+    ],
+    "beta": [
+      {
+        "type d'erreur": "birth_after_entry",
+        "injectées": 31,
+        "signalées": 31,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "death_without_date",
+        "injectées": 20,
+        "signalées": 20,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "duplicate",
+        "injectées": 51,
+        "signalées": 51,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "exit_before_entry",
+        "injectées": 31,
+        "signalées": 31,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "future_date",
+        "injectées": 31,
+        "signalées": 31,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "impossible_age",
+        "injectées": 31,
+        "signalées": 31,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "invalid_sex",
+        "injectées": 31,
+        "signalées": 31,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "sum_assured_typo",
+        "injectées": 41,
+        "signalées": 40,
+        "précision": 1.0,
+        "rappel": 0.976
+      },
+      {
+        "type d'erreur": "TOTAL",
+        "injectées": 267,
+        "signalées": 266,
+        "précision": 1.0,
+        "rappel": 0.996
+      }
+    ],
+    "gamma": [
+      {
+        "type d'erreur": "birth_after_entry",
+        "injectées": 5,
+        "signalées": 4,
+        "précision": 1.0,
+        "rappel": 0.8
+      },
+      {
+        "type d'erreur": "death_without_date",
+        "injectées": 3,
+        "signalées": 3,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "duplicate",
+        "injectées": 8,
+        "signalées": 8,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "exit_before_entry",
+        "injectées": 5,
+        "signalées": 5,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "future_date",
+        "injectées": 5,
+        "signalées": 5,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "impossible_age",
+        "injectées": 5,
+        "signalées": 0,
+        "précision": NaN,
+        "rappel": 0.0
+      },
+      {
+        "type d'erreur": "invalid_sex",
+        "injectées": 5,
+        "signalées": 5,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "sum_assured_typo",
+        "injectées": 7,
+        "signalées": 7,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "TOTAL",
+        "injectées": 43,
+        "signalées": 42,
+        "précision": 1.0,
+        "rappel": 0.977
+      }
+    ],
+    "delta": [
+      {
+        "type d'erreur": "birth_after_entry",
+        "injectées": 16,
+        "signalées": 16,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "death_without_date",
+        "injectées": 11,
+        "signalées": 11,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "duplicate",
+        "injectées": 27,
+        "signalées": 27,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "exit_before_entry",
+        "injectées": 16,
+        "signalées": 16,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "future_date",
+        "injectées": 16,
+        "signalées": 16,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "impossible_age",
+        "injectées": 16,
+        "signalées": 16,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "invalid_sex",
+        "injectées": 16,
+        "signalées": 16,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "sum_assured_typo",
+        "injectées": 22,
+        "signalées": 22,
+        "précision": 1.0,
+        "rappel": 1.0
+      },
+      {
+        "type d'erreur": "TOTAL",
+        "injectées": 140,
+        "signalées": 140,
+        "précision": 1.0,
+        "rappel": 1.0
+      }
+    ]
+  },
+  "credibility": {
+    "alpha": {
+      "décès observés": 452,
+      "K": 51.0,
+      "tau2_bandes": 0.0195,
+      "Z_M": 0.864,
+      "Z_F": 0.747,
+      "theta_M": 0.953,
+      "theta_F": 0.929,
+      "erreur_log_moyenne": {
+        "table OMS (population)": 0.4288,
+        "expérience propre seule (GLM)": 0.0546,
+        "table de marché": 0.1061,
+        "Aléa : crédibilité globale": 0.1294,
+        "Aléa : crédibilité par bandes": 0.1391,
+        "Aléa : bandes, marché sans soi": 0.2554
+      }
+    },
+    "beta": {
+      "décès observés": 169,
+      "K": 51.0,
+      "tau2_bandes": 0.0195,
+      "Z_M": 0.682,
+      "Z_F": 0.544,
+      "theta_M": 1.018,
+      "theta_F": 0.938,
+      "erreur_log_moyenne": {
+        "table OMS (population)": 0.3287,
+        "expérience propre seule (GLM)": 0.1974,
+        "table de marché": 0.1573,
+        "Aléa : crédibilité globale": 0.1693,
+        "Aléa : crédibilité par bandes": 0.1618,
+        "Aléa : bandes, marché sans soi": 0.1739
+      }
+    },
+    "gamma": {
+      "décès observés": 36,
+      "K": 51.0,
+      "tau2_bandes": 0.0195,
+      "Z_M": 0.181,
+      "Z_F": 0.154,
+      "theta_M": 1.107,
+      "theta_F": 1.045,
+      "erreur_log_moyenne": {
+        "table OMS (population)": 0.1952,
+        "expérience propre seule (GLM)": 0.1439,
+        "table de marché": 0.2732,
+        "Aléa : crédibilité globale": 0.2016,
+        "Aléa : crédibilité par bandes": 0.2189,
+        "Aléa : bandes, marché sans soi": 0.2247
+      }
+    },
+    "delta": {
+      "décès observés": 112,
+      "K": 51.0,
+      "tau2_bandes": 0.0195,
+      "Z_M": 0.506,
+      "Z_F": 0.378,
+      "theta_M": 1.047,
+      "theta_F": 1.208,
+      "erreur_log_moyenne": {
+        "table OMS (population)": 0.7136,
+        "expérience propre seule (GLM)": 0.3092,
+        "table de marché": 0.3035,
+        "Aléa : crédibilité globale": 0.3702,
+        "Aléa : crédibilité par bandes": 0.3177,
+        "Aléa : bandes, marché sans soi": 0.3297
+      }
+    }
+  },
+  "pricing": {
+    "alpha": [
+      {
+        "table": "OMS population",
+        "prime_unique": 244629,
+        "prime_annuelle": 29064
+      },
+      {
+        "table": "vérité (inconnue en pratique)",
+        "prime_unique": 163027,
+        "prime_annuelle": 19218
+      },
+      {
+        "table": "Aléa (global)",
+        "prime_unique": 147630,
+        "prime_annuelle": 17373
+      },
+      {
+        "table": "Aléa (bandes)",
+        "prime_unique": 139974,
+        "prime_annuelle": 16462
+      }
+    ],
+    "beta": [
+      {
+        "table": "OMS population",
+        "prime_unique": 244629,
+        "prime_annuelle": 29064
+      },
+      {
+        "table": "vérité (inconnue en pratique)",
+        "prime_unique": 179825,
+        "prime_annuelle": 21230
+      },
+      {
+        "table": "Aléa (global)",
+        "prime_unique": 157426,
+        "prime_annuelle": 18542
+      },
+      {
+        "table": "Aléa (bandes)",
+        "prime_unique": 157360,
+        "prime_annuelle": 18534
+      }
+    ],
+    "gamma": [
+      {
+        "table": "OMS population",
+        "prime_unique": 244629,
+        "prime_annuelle": 29064
+      },
+      {
+        "table": "vérité (inconnue en pratique)",
+        "prime_unique": 204894,
+        "prime_annuelle": 24246
+      },
+      {
+        "table": "Aléa (global)",
+        "prime_unique": 171050,
+        "prime_annuelle": 20171
+      },
+      {
+        "table": "Aléa (bandes)",
+        "prime_unique": 171050,
+        "prime_annuelle": 20171
+      }
+    ],
+    "delta": [
+      {
+        "table": "OMS population",
+        "prime_unique": 244629,
+        "prime_annuelle": 29064
+      },
+      {
+        "table": "vérité (inconnue en pratique)",
+        "prime_unique": 137749,
+        "prime_annuelle": 16184
+      },
+      {
+        "table": "Aléa (global)",
+        "prime_unique": 161858,
+        "prime_annuelle": 19072
+      },
+      {
+        "table": "Aléa (bandes)",
+        "prime_unique": 161916,
+        "prime_annuelle": 19079
+      }
+    ]
+  },
+  "suppression": [
+    {
+      "assureur": "alpha",
+      "cellules partagées": 114,
+      "cellules supprimées": 21,
+      "exposition supprimée (années)": 130.7,
+      "décès supprimés": 10
+    },
+    {
+      "assureur": "beta",
+      "cellules partagées": 108,
+      "cellules supprimées": 20,
+      "exposition supprimée (années)": 120.6,
+      "décès supprimés": 4
+    },
+    {
+      "assureur": "gamma",
+      "cellules partagées": 78,
+      "cellules supprimées": 45,
+      "exposition supprimée (années)": 310.4,
+      "décès supprimés": 6
+    },
+    {
+      "assureur": "delta",
+      "cellules partagées": 100,
+      "cellules supprimées": 26,
+      "exposition supprimée (années)": 110.7,
+      "décès supprimés": 7
+    }
+  ],
+  "durée_s": 284.1
+}
