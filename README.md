@@ -45,13 +45,17 @@ correspondance des colonnes, décisions qualité, paramètres, version du code.
 python -m venv .venv
 .venv\Scripts\activate          # Windows  (Linux/macOS : source .venv/bin/activate)
 pip install -r requirements.txt
-python scripts/generate_data.py  # génère les portefeuilles fictifs
-streamlit run app.py             # interface de démonstration
+python scripts/generate_data.py  # facultatif : les portefeuilles fictifs sont déjà fournis
+streamlit run app.py             # interface de démonstration ; ajouter ?tour=1 à l'adresse pour la visite guidée
 ```
+
+La rédaction par modèle de langage local (Qwen2.5-1.5B, expérimentale, lente sur processeur) est désactivée
+par défaut ; la réactiver avec la variable d'environnement `ALEA_ENABLE_LLM=1`.
 
 Évaluation complète contre la vérité connue des données fictives :
 
 ```bash
+pip install -r requirements-dev.txt
 python scripts/evaluate.py       # écrit reports/evaluation.md
 python scripts/montecarlo.py 30  # écrit reports/montecarlo.md (environ 2 min)
 pytest -q                        # tests unitaires + parcours complet de l'interface

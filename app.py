@@ -388,8 +388,8 @@ elif step == STEPS[6]:
     c1, c2 = st.columns(2)
     if c1.button("Rédiger (modèle déterministe)"):
         S.draft, S.draft_engine = report.template_note(F), "rédacteur déterministe"
-    # Option désactivée en ligne (ALEA_ENABLE_LLM=0) : trop lente sur les processeurs gratuits
-    if os.environ.get("ALEA_ENABLE_LLM", "1") == "1" and c2.button(f"Rédiger avec l'IA locale ({report.LLM_NAME}) — expérimental, lent sur processeur"):
+    # Désactivé par défaut (trop lent sur processeur, 3 Go à télécharger) ; ALEA_ENABLE_LLM=1 pour l'activer en local
+    if os.environ.get("ALEA_ENABLE_LLM", "0") == "1" and c2.button(f"Rédiger avec l'IA locale ({report.LLM_NAME}) — expérimental, lent sur processeur"):
         with st.spinner("Rédaction par le modèle de langage local (processeur)…"):
             try:
                 S.draft, S.draft_engine = report.llm_note(F), report.LLM_NAME
