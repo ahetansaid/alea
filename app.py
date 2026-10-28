@@ -118,6 +118,8 @@ if step == STEPS[0]:
         st.rerun()
     if "raw" in S:
         st.success(f"{S.name} : {len(S.raw):,} lignes, {S.raw.shape[1]} colonnes".replace(",", " "))
+        st.caption("Aperçu du fichier tel que l'assureur l'a fourni : les noms de colonnes sont les siens, parfois en "
+                   "anglais ou abrégés. Aléa les reconnaît et les traduit à l'étape suivante.")
         st.dataframe(S.raw.head(15), use_container_width=True)
 
 # ------------------------------------------------------------------ 2. Colonnes
@@ -131,8 +133,13 @@ elif step == STEPS[1]:
     st.caption(f"Moteur sémantique : {engine}. Confiance = sens de l'en-tête + profil des valeurs.")
     edited = st.data_editor(
         m, use_container_width=True, hide_index=True, disabled=["champ", "libellé", "confiance", "sémantique", "profil", "à confirmer"],
-        column_config={"colonne source": st.column_config.SelectboxColumn(options=list(S.raw.columns), required=True),
-                       "confiance": st.column_config.ProgressColumn(min_value=0, max_value=1, format="%.2f")})
+        column_order=["libellé", "colonne source", "confiance", "sémantique", "profil", "à confirmer"],
+        column_config={"libellé": st.column_config.TextColumn("Information attendue"),
+                       "colonne source": st.column_config.SelectboxColumn("Colonne du fichier", options=list(S.raw.columns), required=True),
+                       "confiance": st.column_config.ProgressColumn("Confiance", min_value=0, max_value=1, format="%.2f"),
+                       "sémantique": st.column_config.NumberColumn("Sens de l'en-tête", format="%.2f"),
+                       "profil": st.column_config.NumberColumn("Profil des valeurs", format="%.2f"),
+                       "à confirmer": st.column_config.CheckboxColumn("À confirmer")})
     if edited["à confirmer"].any():
         st.warning("Certaines correspondances sont à confirmer : vérifiez-les avant de valider.")
     if st.button("Valider la correspondance", type="primary"):
@@ -146,7 +153,12 @@ elif step == STEPS[1]:
         st.success("Correspondance validée. Données mises au format standard.")
     if "norm_log" in S:
         st.subheader("Journal de normalisation")
-        st.dataframe(pd.DataFrame(S.norm_log), use_container_width=True, hide_index=True)
+        log = pd.DataFrame(S.norm_log)
+        log["champ"] = log["champ"].map(lambda c: ui.FIELD_FR.get(c, c))
+        log["transformation"] = log["transformation"].map(ui.date_codes_fr)
+        st.dataframe(log.rename(columns={"champ": "Information", "transformation": "Transformation appliquée",
+                                         "taux de lecture": "Taux de lecture"}),
+                     use_container_width=True, hide_index=True)
 
 # ------------------------------------------------------------------ 3. Qualité
 elif step == STEPS[2]:
@@ -162,14 +174,29 @@ elif step == STEPS[2]:
     c1.metric("Lignes", f"{len(S.canon):,}".replace(",", " "))
     c2.metric("Anomalies signalées", f"{(iss['contrôle'] != 'atypical_profile').sum():,}".replace(",", " "))
     c3.metric("Profils atypiques à examiner", int((iss["contrôle"] == "atypical_profile").sum()))
-    st.dataframe(iss.groupby(["contrôle", "description", "action proposée"]).size().rename("lignes").reset_index(),
+    summ = iss.groupby(["contrôle", "description", "action proposée"]).size().rename("lignes").reset_index()
+    summ.insert(0, "Anomalie", summ.pop("contrôle").map(lambda c: ui.CONTROL_FR.get(c, c)))
+    st.dataframe(summ.rename(columns={"description": "Détail", "action proposée": "Action proposée", "lignes": "Lignes"}),
                  use_container_width=True, hide_index=True)
-    edited = st.data_editor(iss, use_container_width=True, hide_index=True, height=320,
-                            disabled=[c for c in iss.columns if c != "accepter"])
+    iss_view = iss.assign(anomalie=iss["contrôle"].map(lambda c: ui.CONTROL_FR.get(c, c)))
+    edited = st.data_editor(
+        iss_view, use_container_width=True, hide_index=True, height=320,
+        disabled=[c for c in iss_view.columns if c != "accepter"],
+        column_order=["row", "policy_id", "anomalie", "description", "action proposée", "accepter"],
+        column_config={"row": st.column_config.NumberColumn("Ligne du fichier"),
+                       "policy_id": st.column_config.TextColumn("N° de contrat"),
+                       "anomalie": st.column_config.TextColumn("Anomalie"),
+                       "description": st.column_config.TextColumn("Détail"),
+                       "action proposée": st.column_config.TextColumn("Action proposée"),
+                       "accepter": st.column_config.CheckboxColumn("Accepter l'action")})
     if S.key in NAMES and show_truth:
         truth = pd.read_csv(SAMPLES / f"verite_erreurs_{S.key}.csv")
         st.subheader("Vérification contre les erreurs injectées (démo)")
-        st.dataframe(quality.evaluate(edited, truth, S.canon), use_container_width=True, hide_index=True)
+        ev = quality.evaluate(edited, truth, S.canon)
+        ev["type d'erreur"] = ev["type d'erreur"].map(lambda c: ui.CONTROL_FR.get(c, c))
+        st.dataframe(ev.rename(columns={"type d'erreur": "Type d'erreur", "injectées": "Injectées", "signalées": "Signalées",
+                                        "précision": "Précision", "rappel": "Rappel"}),
+                     use_container_width=True, hide_index=True)
     if st.button("Appliquer les décisions", type="primary"):
         S.issues = edited
         S.clean, S.q_summary = quality.apply(S.canon, edited)
@@ -233,9 +260,15 @@ elif step == STEPS[4]:
     for k, cells in others.items():
         a, info = pooling.shareable_aggregates(cells, k)
         aggs.append(a); infos.append(info)
-    st.dataframe(pd.DataFrame(infos), use_container_width=True, hide_index=True)
+    inf = pd.DataFrame(infos)
+    inf["assureur"] = inf["assureur"].map(lambda k: NAMES.get(k, S.get("name", k)))
+    st.dataframe(inf.rename(columns=str.capitalize), use_container_width=True, hide_index=True)
     with st.expander("Ce qui est réellement partagé (extrait)"):
-        st.dataframe(own_agg.head(20), use_container_width=True, hide_index=True)
+        shared_view = own_agg.head(20).assign(assureur=lambda d: d["assureur"].map(lambda k: NAMES.get(k, S.get("name", k))),
+                                              sex=lambda d: d["sex"].map(ui.SEX_FR))
+        st.dataframe(shared_view.rename(columns={"assureur": "Assureur", "sex": "Sexe", "age": "Âge",
+                                                 "E": "Exposition (années)", "D": "Décès"}),
+                     use_container_width=True, hide_index=True)
     try:
         mkt = pipeline.market_model(aggs)
     except ValueError as exc:
@@ -274,27 +307,38 @@ elif step == STEPS[4]:
         st.info("Variante de contrôle : la table de marché est réajustée **sans** votre portefeuille "
                 "(leave-one-out). Utile quand un assureur domine le marché, au risque de perdre la forme de sa propre expérience.")
     if mode in ("bandes", "loo"):
-        kb = pd.DataFrame(cred_used["K_bands"]["per_band"]).rename(
-            columns={"band": "bande", "Ep_moyen": "Ep moyen (marché)", "K": "K de la bande",
-                     "tau2": "τ²", "source_tau2": "source τ²"})
+        kb = pd.DataFrame(cred_used["K_bands"]["per_band"])
+        if "source_tau2" in kb:
+            kb["source_tau2"] = kb["source_tau2"].map({"bande": "estimée sur la bande", "global": "valeur globale"}).fillna(kb["source_tau2"])
+        kb = kb.rename(columns={"band": "Tranche d'âge", "Ep_moyen": "Décès attendus moyens (marché)",
+                                "K": "K (poids du marché)", "tau2": "Hétérogénéité τ²", "source_tau2": "Origine de τ²"})
         st.dataframe(kb, use_container_width=True, hide_index=True)
         st.caption(f"τ² global = {cred_used['K_bands']['tau2_global']:.4f} ; par bande, τ² estimé sur les assureurs de la "
                    "bande avec repli sur la valeur globale quand elle est instable. "
                    "Repli sur le θ global du sexe si la bande compte moins de 20 décès attendus.")
-        tb = cred_used["theta_bands"][["sex", "band", "D", "Ep", "theta_obs", "Z", "theta", "theta_lo", "theta_hi", "repli", "theta_retenu"]].rename(columns={
-            "sex": "sexe", "band": "bande", "D": "décès", "Ep": "attendus (marché)", "theta_obs": "observé / attendu",
-            "Z": "crédibilité Z", "theta": "θ bande", "theta_lo": "IC bas", "theta_hi": "IC haut",
-            "repli": "repli sur global", "theta_retenu": "retenu"})
-        pct = ["observé / attendu", "crédibilité Z", "θ bande", "IC bas", "IC haut", "retenu"]
-        st.dataframe(tb.style.format({c: "{:.1%}" for c in pct} | {"attendus (marché)": "{:.1f}"}),
+        tb = cred_used["theta_bands"][["sex", "band", "D", "Ep", "theta_obs", "Z", "theta", "theta_lo", "theta_hi", "repli", "theta_retenu"]].copy()
+        tb["sex"] = tb["sex"].map(ui.SEX_FR)
+        tb["repli"] = tb["repli"].map(ui.YES_NO)
+        tb = tb.rename(columns={
+            "sex": "Sexe", "band": "Tranche d'âge", "D": "Décès observés", "Ep": "Décès attendus (marché)",
+            "theta_obs": "Observés / attendus", "Z": "Crédibilité Z", "theta": "Mortalité de la tranche",
+            "theta_lo": "IC 95 % bas", "theta_hi": "IC 95 % haut", "repli": "Repli sur le niveau global",
+            "theta_retenu": "Mortalité retenue"})
+        pct = ["Observés / attendus", "Crédibilité Z", "Mortalité de la tranche", "IC 95 % bas", "IC 95 % haut", "Mortalité retenue"]
+        st.dataframe(tb.style.format({c: "{:.1%}" for c in pct} | {"Décès attendus (marché)": "{:.1f}", "Décès observés": "{:.0f}"}),
                      use_container_width=True, hide_index=True)
+        st.caption("Les pourcentages de mortalité sont exprimés par rapport à la table de marché (100 % = mortalité du marché).")
     else:
         st.caption(f"K = {cred['K']['K']:.0f} : estimé sur les données mutualisées (hétérogénéité réelle entre assureurs).")
-        th = cred["theta"][["sex", "D", "Ep", "theta_obs", "Z", "theta", "theta_lo", "theta_hi"]].rename(columns={
-            "sex": "sexe", "D": "décès", "Ep": "attendus (marché)", "theta_obs": "observé / attendu", "Z": "crédibilité Z",
-            "theta": "retenu", "theta_lo": "IC bas", "theta_hi": "IC haut"})
-        st.dataframe(th.style.format({c: "{:.1%}" for c in ["observé / attendu", "crédibilité Z", "retenu", "IC bas", "IC haut"]} | {"attendus (marché)": "{:.1f}"}),
+        th = cred["theta"][["sex", "D", "Ep", "theta_obs", "Z", "theta", "theta_lo", "theta_hi"]].copy()
+        th["sex"] = th["sex"].map(ui.SEX_FR)
+        th = th.rename(columns={
+            "sex": "Sexe", "D": "Décès observés", "Ep": "Décès attendus (marché)", "theta_obs": "Observés / attendus",
+            "Z": "Crédibilité Z", "theta": "Mortalité retenue", "theta_lo": "IC 95 % bas", "theta_hi": "IC 95 % haut"})
+        st.dataframe(th.style.format({c: "{:.1%}" for c in ["Observés / attendus", "Crédibilité Z", "Mortalité retenue", "IC 95 % bas", "IC 95 % haut"]}
+                                     | {"Décès attendus (marché)": "{:.1f}", "Décès observés": "{:.0f}"}),
                      use_container_width=True, hide_index=True)
+        st.caption("Les pourcentages de mortalité sont exprimés par rapport à la table de marché (100 % = mortalité du marché).")
     if st.button("Intervalle de confiance 95 % — bootstrap de bout en bout (~200 réajustements)"):
         with st.spinner("Bootstrap : marché, K et crédibilité réajustés sur chaque rééchantillon…"):
             S.boot = bootstrap.bootstrap_ic(shared, S.key, n_iter=200, seed=0)
@@ -356,7 +400,11 @@ elif step == STEPS[5]:
     rows = pd.DataFrame(pricing.compare(tables, sex, int(age), int(term), float(cap), float(rate)))
     base = rows.loc[rows["table"] == "Table OMS (population)", "prime_annuelle"].iloc[0]
     rows["écart vs OMS"] = (rows["prime_annuelle"] / base - 1).map("{:+.1%}".format)
-    st.dataframe(rows, use_container_width=True, hide_index=True)
+    view = rows.assign(prime_unique=rows["prime_unique"].map(lambda v: f"{report.fmt_num(v)} FCFA"),
+                       prime_annuelle=rows["prime_annuelle"].map(lambda v: f"{report.fmt_num(v)} FCFA"))
+    st.dataframe(view.rename(columns={"table": "Table de mortalité", "prime_unique": "Prime unique pure",
+                                      "prime_annuelle": "Prime annuelle pure", "écart vs OMS": "Écart avec la table OMS"}),
+                 use_container_width=True, hide_index=True)
     if CIMA is None:
         st.info("Table CIMA non chargée : déposer data/reference/cima.csv pour l'ajouter à la comparaison (voir SOURCES.md).")
     if "boot" in S:

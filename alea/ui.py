@@ -510,3 +510,24 @@ def guide_page() -> None:
         "- **Tables CIMA.** Aucune valeur n'est inventée : déposez `data/reference/cima.csv` pour les comparer.\n"
         "- **Traçabilité.** Chaque note signée est archivée dans `runs/` avec l'empreinte du fichier, vos décisions "
         "et les paramètres.")
+
+
+# ------------------------------------------------------------------ libellés français des tableaux
+FIELD_FR = {"policy_id": "N° de contrat", "birth_date": "Date de naissance", "sex": "Sexe", "entry_date": "Date d'effet",
+            "exit_date": "Date de sortie", "exit_reason": "Motif de sortie", "sum_assured": "Capital assuré", "product": "Produit"}
+CONTROL_FR = {"duplicate": "Doublon", "unreadable_date": "Date illisible", "birth_after_entry": "Naissance après l'effet",
+              "impossible_age": "Âge impossible", "exit_before_entry": "Sortie avant l'effet",
+              "death_without_date": "Décès sans date", "future_date": "Sortie après l'extraction",
+              "invalid_sex": "Sexe non reconnu", "sum_assured_typo": "Capital aberrant",
+              "atypical_profile": "Profil atypique", "TOTAL": "Total"}
+SEX_FR = {"M": "Hommes", "F": "Femmes"}
+YES_NO = {True: "Oui", False: "Non"}
+
+
+def date_codes_fr(text) -> str:
+    """« %d-%m-%y » devient « JJ-MM-AA »."""
+    if not isinstance(text, str):
+        return text
+    for code, fr in (("%Y", "AAAA"), ("%y", "AA"), ("%m", "MM"), ("%d", "JJ")):
+        text = text.replace(code, fr)
+    return text
