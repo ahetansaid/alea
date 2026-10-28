@@ -13,7 +13,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import streamlit as st
 
-from alea import audit, bootstrap, credibility, experience, facts, mapping, normalize, pipeline, pooling, pricing, quality, report
+from alea import ui, audit, bootstrap, credibility, experience, facts, mapping, normalize, pipeline, pooling, pricing, quality, report
 from alea.reference import load_regulatory, load_who_benin, mu_lookup
 from alea.synth import INSURERS
 
@@ -22,13 +22,20 @@ SAMPLES = ROOT / "data" / "samples"
 NAMES = {s.key: s.name for s in INSURERS}
 
 st.set_page_config(page_title="Aléa — actuariat augmenté", page_icon="📈", layout="wide")
+ui.inject_css()
 S = st.session_state
 
 STEPS = ["1. Données", "2. Colonnes", "3. Qualité", "4. Expérience", "5. Mutualisation", "6. Tarification", "7. Note technique"]
+GUIDE = "Guide utilisateur"
+DONE = dict(zip(STEPS, ["raw" in S, "canon" in S, "cells" in S, "own_fit" in S, "cred" in S, "pricing_case" in S, "draft" in S]))
 with st.sidebar:
-    st.title("Aléa")
-    st.caption("Actuariat augmenté — l'IA prépare, l'actuaire décide.")
-    step = st.radio("Étapes", STEPS, label_visibility="collapsed")
+    ui.brand()
+    # Libellés fixes : les modifier changerait l'identité du widget et renverrait à l'étape 1.
+    step = st.radio("Étapes", STEPS + [GUIDE], label_visibility="collapsed")
+    ui.nav_done(list(DONE.values()))
+    if st.button("Visite guidée animée", use_container_width=True):
+        S.tour_i = 0
+        ui.tour()
     st.divider()
     st.caption("Prototype sur données **fictives**. Aucune donnée réelle n'est utilisée.")
     show_truth = st.toggle("Afficher la vérité (démo)", value=False,
@@ -66,25 +73,49 @@ def need(*keys):
 
 REF_MU, CIMA = ref_tables()
 
+# Lien de démonstration : ?tour=1 ouvre la visite guidée au premier affichage
+if st.query_params.get("tour") == "1":
+    st.query_params.clear()
+    S.tour_i = 0
+    ui.tour()
+
+if step == GUIDE:
+    ui.guide_page()
+    st.stop()
+
+if step == STEPS[0] and "raw" not in S:
+    ui.intro_banner()
+    if st.button("Lancer la visite guidée (1 minute)", key="welcome_tour"):
+        S.tour_i = 0
+        ui.tour()
+    st.write("")
+
+ui.stepper(STEPS, STEPS.index(step), list(DONE.values()))
+
 # ------------------------------------------------------------------ 1. Données
 if step == STEPS[0]:
-    st.header("1. Données du portefeuille")
-    st.write("Fichier brut d'un assureur, tel qu'exporté de son système : colonnes, formats et codes propres à chacun.")
-    src = st.radio("Source", ["Portefeuille fictif fourni", "Importer un fichier CSV"], horizontal=True)
-    if src.startswith("Portefeuille"):
-        key = st.selectbox("Assureur", list(NAMES), format_func=NAMES.get, index=2)
-        data = (SAMPLES / f"portefeuille_{key}.csv").read_bytes()
-        name = NAMES[key]
-    else:
-        up = st.file_uploader("Fichier CSV", type=["csv", "txt"])
-        if not up:
-            st.stop()
-        data, key, name = up.getvalue(), "import", up.name
-    if st.button("Charger", type="primary"):
+    ui.hero(1, "Données du portefeuille",
+            "Fichier brut d'un assureur, tel qu'exporté de son système : colonnes, formats et codes propres à chacun.",
+            "lit le fichier tel quel (séparateur, encodage)", "choisissez le portefeuille")
+    ui.help_box(0)
+    with st.container(border=True):
+        src = st.radio("Source", ["Portefeuille fictif fourni", "Importer un fichier CSV"], horizontal=True)
+        if src.startswith("Portefeuille"):
+            key = st.selectbox("Assureur", list(NAMES), format_func=NAMES.get, index=2)
+            data = (SAMPLES / f"portefeuille_{key}.csv").read_bytes()
+            name = NAMES[key]
+        else:
+            up = st.file_uploader("Fichier CSV", type=["csv", "txt"])
+            if not up:
+                st.stop()
+            data, key, name = up.getvalue(), "import", up.name
+        load = st.button("Charger", type="primary")
+    if load:
         for k in list(S.keys()):
             del S[k]
         S.raw = pipeline.read_portfolio(data)
         S.key, S.name, S.sha = key, name, audit.sha256(data)
+        st.rerun()
     if "raw" in S:
         st.success(f"{S.name} : {len(S.raw):,} lignes, {S.raw.shape[1]} colonnes".replace(",", " "))
         st.dataframe(S.raw.head(15), use_container_width=True)
@@ -92,7 +123,10 @@ if step == STEPS[0]:
 # ------------------------------------------------------------------ 2. Colonnes
 elif step == STEPS[1]:
     need("raw")
-    st.header("2. Correspondance des colonnes")
+    ui.hero(2, "Correspondance des colonnes",
+            "Chaque assureur nomme ses colonnes à sa façon. Aléa reconnaît chacune d'elles et indique sa confiance.",
+            "propose une colonne par champ, avec sa confiance", "confirmez ou corrigez, puis validez")
+    ui.help_box(1)
     m, engine = cached_mapping(S.raw)
     st.caption(f"Moteur sémantique : {engine}. Confiance = sens de l'en-tête + profil des valeurs.")
     edited = st.data_editor(
@@ -117,8 +151,10 @@ elif step == STEPS[1]:
 # ------------------------------------------------------------------ 3. Qualité
 elif step == STEPS[2]:
     need("canon")
-    st.header("3. Contrôle qualité")
-    st.write("Contrôles de règles et détection d'anomalies (Isolation Forest). **Chaque action est soumise à votre décision.**")
+    ui.hero(3, "Contrôle qualité",
+            "Contrôles de règles et détection d'anomalies (Isolation Forest). Chaque action est soumise à votre décision.",
+            "détecte les anomalies et propose une action", "acceptez ou refusez chaque action")
+    ui.help_box(2)
     if "issues" not in S:
         S.issues = quality.detect(S.canon)
     iss = S.issues
@@ -141,12 +177,18 @@ elif step == STEPS[2]:
         S.decisions = edited.groupby(["contrôle", "accepter"]).size().rename("n").reset_index().to_dict("records")
         st.success("Décisions appliquées.")
     if "q_summary" in S:
-        st.json(S.q_summary)
+        q = S.q_summary
+        cols = st.columns(len(q))
+        for col, (label, value) in zip(cols, q.items()):
+            col.metric(label.capitalize(), f"{value:,}".replace(",", " "))
 
 # ------------------------------------------------------------------ 4. Expérience
 elif step == STEPS[3]:
     need("cells")
-    st.header("4. Étude d'expérience")
+    ui.hero(4, "Étude d'expérience",
+            "Expositions et décès par âge et sexe, modèle lissé et comparaison à la table de population OMS du Bénin.",
+            "ajuste le modèle et son intervalle à 95 %", "jugez la cohérence de l'expérience")
+    ui.help_box(3)
     fit = experience.fit_relative_glm(S.cells, REF_MU)
     S.own_fit = fit
     c1, c2, c3 = st.columns(3)
@@ -157,25 +199,27 @@ elif step == STEPS[3]:
     t = fit["table"][fit["table"]["sex"] == sex]
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=t["age"], y=t["mu_hi"], line=dict(width=0), showlegend=False, hoverinfo="skip"))
-    fig.add_trace(go.Scatter(x=t["age"], y=t["mu_lo"], fill="tonexty", line=dict(width=0), name="IC 95 %", fillcolor="rgba(31,78,121,0.2)"))
-    fig.add_trace(go.Scatter(x=t["age"], y=t["mu"], name="GLM (expérience propre)", line=dict(color="#1f4e79", width=3)))
+    fig.add_trace(go.Scatter(x=t["age"], y=t["mu_lo"], fill="tonexty", line=dict(width=0), name="IC 95 %", fillcolor="rgba(29,78,116,0.2)"))
+    fig.add_trace(go.Scatter(x=t["age"], y=t["mu"], name="GLM (expérience propre)", line=dict(color="#1d4e74", width=3)))
     fig.add_trace(go.Scatter(x=t["age"], y=t["crude"], mode="markers", name="Taux bruts", marker=dict(color="#888", size=5)))
-    fig.add_trace(go.Scatter(x=t["age"], y=t["mu_ref"], name="Table OMS Bénin (population)", line=dict(color="#e69500", dash="dash")))
+    fig.add_trace(go.Scatter(x=t["age"], y=t["mu_ref"], name="Table OMS Bénin (population)", line=dict(color="#b7791f", dash="dash")))
     if show_truth and S.key in NAMES:
         tm = pd.read_csv(SAMPLES / f"verite_mortalite_{S.key}.csv")
         tm = tm[tm["age"].between(20, 80)]
         fig.add_trace(go.Scatter(x=tm["age"], y=tm[f"mu_{sex}"], name="Vérité (démo)", line=dict(color="green", dash="dot")))
     fig.update_layout(yaxis_type="log", yaxis_title="Force de mortalité (échelle log)", xaxis_title="Âge", height=480)
     st.plotly_chart(fig, use_container_width=True)
-    st.caption("GLM de Poisson relatif à la table OMS : log E[D] = log(E·μ_ref) + polynôme de l'âge + effet sexe.")
+    st.caption("GLM de Poisson relatif à la table OMS : log E[D] = log(E·μ_ref) + b0 + b1·âge + effet sexe "
+               "(forme log-linéaire, robuste quand les décès sont rares aux jeunes âges).")
 
 # ------------------------------------------------------------------ 5. Mutualisation
 elif step == STEPS[4]:
     need("cells")
-    st.header("5. Mutualisation de marché et crédibilité")
-    st.write("Chaque assureur ne partage que des **agrégats** (exposition et décès par sexe et âge). "
-             "Les petites cellules sont supprimées avant partage, et les cellules où un seul assureur "
-             "contribue sont retirées du marché : aucune donnée personnelle ne circule.")
+    ui.hero(5, "Mutualisation et crédibilité",
+            "Chaque assureur ne partage que des agrégats (exposition et décès par sexe et âge). Les petites cellules "
+            "et celles d'un seul contributeur sont retirées : aucune donnée personnelle ne circule.",
+            "construit le marché et pondère votre expérience", "choisissez le modèle de crédibilité")
+    ui.help_box(4)
     st.caption(f"Le seuil de partage est une **constante du marché** ({int(pooling.MIN_EXPOSURE)} années) : le "
                "publier à deux seuils différents permettrait de reconstituer par soustraction les cellules "
                "individuelles (40 cellules reconstituables sur le jeu de démonstration, voir "
@@ -269,13 +313,13 @@ elif step == STEPS[4]:
         lo, hi = boot[f"{key}_lo"][sex][ages], boot[f"{key}_hi"][sex][ages]
         fig.add_trace(go.Scatter(x=ages, y=hi, line=dict(width=0), showlegend=False, hoverinfo="skip"))
         fig.add_trace(go.Scatter(x=ages, y=lo, fill="tonexty", line=dict(width=0), name="IC bootstrap 95 %",
-                                 fillcolor="rgba(31,78,121,0.18)", hoverinfo="skip"))
-    fig.add_trace(go.Scatter(x=ages, y=REF_MU[sex][ages], name="Table OMS (population)", line=dict(color="#e69500", dash="dash")))
+                                 fillcolor="rgba(29,78,116,0.18)", hoverinfo="skip"))
+    fig.add_trace(go.Scatter(x=ages, y=REF_MU[sex][ages], name="Table OMS (population)", line=dict(color="#b7791f", dash="dash")))
     fig.add_trace(go.Scatter(x=ages, y=mkt["mu"][sex][ages], name="Table de marché (mutualisée)", line=dict(color="#7f7f7f")))
     fig.add_trace(go.Scatter(x=ages, y=own_mu[sex][ages], name="Expérience propre seule", line=dict(color="#9ecae1")))
     fig.add_trace(go.Scatter(x=ages, y=S.mu_alea[sex][ages],
                              name={"bandes": "Aléa : bandes", "global": "Aléa : global", "loo": "Aléa : bandes, marché sans soi"}[mode],
-                             line=dict(color="#1f4e79", width=3)))
+                             line=dict(color="#1d4e74", width=3)))
     if CIMA is not None:
         cm = mu_lookup(CIMA)
         fig.add_trace(go.Scatter(x=ages, y=cm[sex][ages], name="Table CIMA", line=dict(color="red")))
@@ -295,7 +339,10 @@ elif step == STEPS[4]:
 # ------------------------------------------------------------------ 6. Tarification
 elif step == STEPS[5]:
     need("cred")
-    st.header("6. Impact tarifaire")
+    ui.hero(6, "Impact tarifaire",
+            "Prime pure d'un temporaire décès selon chaque table, à hypothèses égales.",
+            "calcule les primes et leur incertitude", "fixez les hypothèses du contrat")
+    ui.help_box(5)
     c1, c2, c3, c4, c5 = st.columns(5)
     sex = c1.selectbox("Sexe", ["M", "F"], format_func={"M": "Homme", "F": "Femme"}.get)
     age = c2.number_input("Âge", 18, 70, 40)
@@ -327,7 +374,10 @@ elif step == STEPS[5]:
 # ------------------------------------------------------------------ 7. Note technique
 elif step == STEPS[6]:
     need("cred", "pricing_case")
-    st.header("7. Note technique assistée")
+    ui.hero(7, "Note technique assistée",
+            "La note est construite à partir des seuls résultats calculés ; un garde-fou vérifie chaque nombre.",
+            "rédige et vérifie chaque nombre", "relisez, validez et signez")
+    ui.help_box(6)
     own = experience.fit_relative_glm(S.cells, REF_MU)
     mode = S.get("cred_mode", "global")
     cred_used = S.cred_loo if mode == "loo" else S.cred

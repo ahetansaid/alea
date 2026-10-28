@@ -84,7 +84,9 @@ def expected_deaths_by_band(cells: pd.DataFrame, mu: dict[str, np.ndarray],
                             age_min=AGE_MIN, age_max=AGE_MAX) -> pd.DataFrame:
     c = cells[cells["age"].between(age_min, age_max)].copy()
     c["Ep"] = _ep_matrix(c, mu)
-    c["band"] = band_of(c["age"])
+    # .to_numpy() : band_of renvoie une série réindexée de 0 à n ; l'affecter telle quelle l'alignerait sur
+    # l'index (non contigu après filtrage) au lieu de la position — bandes décalées et femmes perdues.
+    c["band"] = band_of(c["age"]).to_numpy()
     return c.groupby(["sex", "band"], observed=True)[["D", "Ep", "E"]].sum().reset_index()
 
 

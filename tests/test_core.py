@@ -92,3 +92,17 @@ def test_guard_flags_untraced_numbers():
     facts = {"a": {"libellé": "x", "texte": "112 %"}, "b": {"libellé": "y", "texte": "2 450 FCFA"}}
     assert report.guard("La mortalité vaut 112 % et la prime 2 450 FCFA (IC à 95 %).", facts) == []
     assert report.guard("La mortalité vaut 118 %.", facts) == ["118"]
+
+
+def test_expected_deaths_by_band_keeps_both_sexes_and_bands():
+    """Régression : l'affectation des bandes alignait sur l'index et perdait les femmes."""
+    ages = np.arange(0, 106)
+    cells = pd.concat([pd.DataFrame({"sex": s, "age": ages, "E": 100.0, "D": 1.0}) for s in ("M", "F")],
+                      ignore_index=True)
+    mu = {s: np.full(106, 0.01) for s in ("M", "F")}
+    out = credibility.expected_deaths_by_band(cells, mu)
+    assert set(out["sex"]) == {"M", "F"}
+    assert len(out) == 8
+    for _, r in out.iterrows():
+        lo, hi = map(int, str(r["band"]).split("-"))
+        assert r["E"] == 100.0 * (hi - lo + 1)

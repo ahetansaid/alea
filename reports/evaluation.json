@@ -297,8 +297,8 @@
         "expérience propre seule (GLM)": 0.0546,
         "table de marché": 0.1061,
         "Aléa : crédibilité globale": 0.1294,
-        "Aléa : crédibilité par bandes": 0.1391,
-        "Aléa : bandes, marché sans soi": 0.2554
+        "Aléa : crédibilité par bandes": 0.1074,
+        "Aléa : bandes, marché sans soi": 0.1854
       }
     },
     "beta": {
@@ -314,8 +314,8 @@
         "expérience propre seule (GLM)": 0.1974,
         "table de marché": 0.1573,
         "Aléa : crédibilité globale": 0.1693,
-        "Aléa : crédibilité par bandes": 0.1618,
-        "Aléa : bandes, marché sans soi": 0.1739
+        "Aléa : crédibilité par bandes": 0.1652,
+        "Aléa : bandes, marché sans soi": 0.1788
       }
     },
     "gamma": {
@@ -331,8 +331,8 @@
         "expérience propre seule (GLM)": 0.1439,
         "table de marché": 0.2732,
         "Aléa : crédibilité globale": 0.2016,
-        "Aléa : crédibilité par bandes": 0.2189,
-        "Aléa : bandes, marché sans soi": 0.2247
+        "Aléa : crédibilité par bandes": 0.2016,
+        "Aléa : bandes, marché sans soi": 0.2064
       }
     },
     "delta": {
@@ -348,8 +348,8 @@
         "expérience propre seule (GLM)": 0.3092,
         "table de marché": 0.3035,
         "Aléa : crédibilité globale": 0.3702,
-        "Aléa : crédibilité par bandes": 0.3177,
-        "Aléa : bandes, marché sans soi": 0.3297
+        "Aléa : crédibilité par bandes": 0.3725,
+        "Aléa : bandes, marché sans soi": 0.3867
       }
     }
   },
@@ -372,8 +372,8 @@
       },
       {
         "table": "Aléa (bandes)",
-        "prime_unique": 139974,
-        "prime_annuelle": 16462
+        "prime_unique": 154961,
+        "prime_annuelle": 18247
       }
     ],
     "beta": [
@@ -394,8 +394,8 @@
       },
       {
         "table": "Aléa (bandes)",
-        "prime_unique": 157360,
-        "prime_annuelle": 18534
+        "prime_unique": 158831,
+        "prime_annuelle": 18712
       }
     ],
     "gamma": [
@@ -438,8 +438,8 @@
       },
       {
         "table": "Aléa (bandes)",
-        "prime_unique": 161916,
-        "prime_annuelle": 19079
+        "prime_unique": 160716,
+        "prime_annuelle": 18936
       }
     ]
   },
@@ -473,5 +473,5 @@
       "décès supprimés": 7
     }
   ],
-  "durée_s": 284.1
+  "durée_s": 162.3
 }

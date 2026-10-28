@@ -87,16 +87,16 @@ Erreur logarithmique absolue moyenne, pondérée par l'exposition, âges 25 à 7
 
 | Assureur | Décès | table OMS (population) | expérience propre seule (GLM) | table de marché | Aléa : crédibilité globale | Aléa : crédibilité par bandes | Aléa : bandes, marché sans soi |
 |---|---|---|---|---|---|---|---|
-| alpha | 452 | 0.4288 | 0.0546 | 0.1061 | 0.1294 | 0.1391 | 0.2554 |
-| beta | 169 | 0.3287 | 0.1974 | 0.1573 | 0.1693 | 0.1618 | 0.1739 |
-| gamma | 36 | 0.1952 | 0.1439 | 0.2732 | 0.2016 | 0.2189 | 0.2247 |
-| delta | 112 | 0.7136 | 0.3092 | 0.3035 | 0.3702 | 0.3177 | 0.3297 |
+| alpha | 452 | 0.4288 | 0.0546 | 0.1061 | 0.1294 | 0.1074 | 0.1854 |
+| beta | 169 | 0.3287 | 0.1974 | 0.1573 | 0.1693 | 0.1652 | 0.1788 |
+| gamma | 36 | 0.1952 | 0.1439 | 0.2732 | 0.2016 | 0.2016 | 0.2064 |
+| delta | 112 | 0.7136 | 0.3092 | 0.3035 | 0.3702 | 0.3725 | 0.3867 |
 
 ## 5. Prime annuelle pure — temporaire décès, homme 40 ans, 10 ans, 5 000 000 FCFA, taux 3,5 %
 
-- **alpha** : OMS population = 29 064 FCFA ; vérité (inconnue en pratique) = 19 218 FCFA ; Aléa (global) = 17 373 FCFA ; Aléa (bandes) = 16 462 FCFA
-- **beta** : OMS population = 29 064 FCFA ; vérité (inconnue en pratique) = 21 230 FCFA ; Aléa (global) = 18 542 FCFA ; Aléa (bandes) = 18 534 FCFA
+- **alpha** : OMS population = 29 064 FCFA ; vérité (inconnue en pratique) = 19 218 FCFA ; Aléa (global) = 17 373 FCFA ; Aléa (bandes) = 18 247 FCFA
+- **beta** : OMS population = 29 064 FCFA ; vérité (inconnue en pratique) = 21 230 FCFA ; Aléa (global) = 18 542 FCFA ; Aléa (bandes) = 18 712 FCFA
 - **gamma** : OMS population = 29 064 FCFA ; vérité (inconnue en pratique) = 24 246 FCFA ; Aléa (global) = 20 171 FCFA ; Aléa (bandes) = 20 171 FCFA
-- **delta** : OMS population = 29 064 FCFA ; vérité (inconnue en pratique) = 16 184 FCFA ; Aléa (global) = 19 072 FCFA ; Aléa (bandes) = 19 079 FCFA
+- **delta** : OMS population = 29 064 FCFA ; vérité (inconnue en pratique) = 16 184 FCFA ; Aléa (global) = 19 072 FCFA ; Aléa (bandes) = 18 936 FCFA
 
-Durée totale : 284.1 s.
+Durée totale : 162.3 s.

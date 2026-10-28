@@ -91,17 +91,22 @@ trois dont la mortalité a une **forme** par âge différente de la moyenne du m
   observé/attendu par bande ([`reports/stress.md`](reports/stress.md)).
 - Erreur moyenne par rapport à la vraie mortalité (Monte-Carlo, 30 marchés) :
 
-| Assureur | Décès moyens | Table OMS seule | Expérience propre seule | Table de marché | Aléa (global) | **Aléa (bandes)** |
-|---|---|---|---|---|---|---|
-| 40 000 contrats | 445 | 42,9 % | 6,4 % | 5,3 % | 5,6 % | **5,3 %** |
-| 15 000 contrats | 184 | 32,9 % | 10,6 % | 7,1 % | 6,7 % | **6,6 %** |
-| 8 000 contrats | 95 | 68,5 % | 17,2 % | 33,4 % | 33,5 % | 33,5 % |
-| 5 000 contrats | 64 | 15,8 % | 15,7 % | 31,0 % | 30,0 % | 30,2 % |
-| 2 500 contrats | 33 | 19,6 % | 25,0 % | 19,6 % | 18,6 % | 18,9 % |
-| 1 500 contrats | 20 | 67,4 % | 37,4 % | 36,9 % | 37,1 % | 37,1 % |
+| Assureur | Profil | Décès moyens | Table OMS seule | Expérience propre seule | Table de marché | Aléa (global) | Aléa (bandes) |
+|---|---|---|---|---|---|---|---|
+| 40 000 contrats | comme le marché | 445 | 42,9 % | 6,4 % | **5,4 %** | 5,8 % | 5,9 % |
+| 15 000 contrats | comme le marché | 184 | 32,9 % | 10,6 % | 7,2 % | **6,9 %** | 7,5 % |
+| 8 000 contrats | forme divergente | 95 | 68,5 % | **17,2 %** | 33,3 % | 33,4 % | 32,5 % |
+| 5 000 contrats | forme divergente | 64 | 15,8 % | **15,7 %** | 31,1 % | 30,1 % | 30,1 % |
+| 2 500 contrats | comme le marché | 33 | 19,6 % | 25,0 % | 19,7 % | **18,6 %** | **18,6 %** |
+| 1 500 contrats | forme divergente | 20 | 67,4 % | 37,4 % | **36,7 %** | 37,0 % | 37,0 % |
 
-Quand le marché a une forme homogène (assureurs A, B), la crédibilité par bandes égale ou améliore la
-meilleure table de référence, y compris pour l'assureur dominant. Quand le marché mélange des formes de
+Correctif du 28/10/2026 : la crédibilité par bandes perdait les femmes et décalait les bandes (alignement
+d'index pandas) ; les chiffres ci-dessus sont ceux recalculés après correction, et un test de non-régression
+couvre désormais ce cas.
+
+Quand les assureurs ont un profil de mortalité semblable (A, B, E), Aléa est la meilleure méthode ou à moins
+d'un demi-point de la meilleure — pour l'assureur dominant (A), la table de marché, qu'il alimente
+largement, fait légèrement mieux. Quand le marché mélange des formes de
 mortalité différentes (C, D, F), la table de marché elle-même est biaisée de 30 % et plus, et Aléa en
 hérite : dans ce cas l'expérience propre seule ou la table OMS fait mieux. C'est une limite de la
 référence mutualisée, pas de la crédibilité — un marché unique ne peut pas être juste pour tous. Aléa le
